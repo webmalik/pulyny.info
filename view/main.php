@@ -15,6 +15,9 @@
 <body>
 <div class="container-fluid">
     <div class="row">
+        <div class="progress">
+            <div class="indeterminate"></div>
+        </div>
         <div class="col s12 m6">
             <a href="#" class="logo">
                 <img src="<?=HOST?>/template/img/logo.png" alt="">
@@ -74,7 +77,7 @@
                 Powered by <a href="#">WebMaLik</a>
             </div>
         </div>
-    </div>
+    </div>s
 </div>
 
 <!-- SCRIPTS -->

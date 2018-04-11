@@ -2238,6 +2238,9 @@ nav {
   padding: 0 20px;
   font-weight: bold;
 }
+nav ul a {
+  padding: 24px 15px;
+}
 nav a {
   color: #202020 !important;
 }
@@ -2267,7 +2270,11 @@ nav i.fa-bars {
 
 .row {
   position: relative;
-  margin: 0 -20px;
+}
+
+.page-footer {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .footer {

@@ -2268,6 +2268,21 @@ nav i.fa-bars {
   padding-left: 40px;
 }
 
+.left-panel {
+  border: 1px solid #202020;
+}
+.left-panel .left-panel-header {
+  color: #f7f7f7;
+  background: #202020;
+  padding: 20px 10px;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 transparent, 0 0px 0px 0px transparent !important;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 transparent, 0 0px 0px 0px transparent !important;
+}
+.left-panel .left-panel-content .SinoptikInformer {
+  padding: 10px;
+}
+
 .row {
   position: relative;
 }

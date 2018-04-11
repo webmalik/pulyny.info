@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="7d2b6c01-0aa9-4c92-94b2-3ef709beda93" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+=======
+    <list default="true" id="7d2b6c01-0aa9-4c92-94b2-3ef709beda93" name="Default" comment="" />
+>>>>>>> sinoptik_module
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +18,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/main.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -24,11 +28,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/site/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
+<<<<<<< HEAD
               <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+=======
+              <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+>>>>>>> sinoptik_module
               <folding />
             </state>
           </provider>
@@ -77,8 +85,13 @@
       <file leaf-file-name="style.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/sass/style.sass">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="368">
               <caret line="37" column="7" lean-forward="false" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+=======
+            <state relative-caret-position="79">
+              <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+>>>>>>> sinoptik_module
               <folding />
             </state>
           </provider>
@@ -132,8 +145,8 @@
         <option value="$PROJECT_DIR$/template/css/materialize.min.css" />
         <option value="$PROJECT_DIR$/template/js/main.js" />
         <option value="$PROJECT_DIR$/view/main.php" />
-        <option value="$PROJECT_DIR$/template/sass/style.sass" />
         <option value="$PROJECT_DIR$/view/site/index.php" />
+        <option value="$PROJECT_DIR$/template/sass/style.sass" />
       </list>
     </option>
   </component>
@@ -380,12 +393,16 @@
       <workItem from="1511116055111" duration="5355000" />
       <workItem from="1516566211543" duration="34000" />
       <workItem from="1523178377563" duration="1917000" />
-      <workItem from="1523474444273" duration="2828000" />
+      <workItem from="1523474444273" duration="4066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="68198000" />
+=======
+    <option name="totallyTimeSpent" value="69347000" />
+>>>>>>> sinoptik_module
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -572,8 +589,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/css/materialize.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="482">
+          <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="2" />
+=======
+        <state relative-caret-position="151">
+          <caret line="5" column="39649" lean-forward="false" selection-start-line="5" selection-start-column="39649" selection-end-line="5" selection-end-column="39649" />
+>>>>>>> sinoptik_module
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/template/sass/_colors.scss">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="151">
+          <caret line="5" column="39649" lean-forward="false" selection-start-line="5" selection-start-column="39649" selection-end-line="5" selection-end-column="39649" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+=======
         <state relative-caret-position="482">
           <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="2" />
           <folding />
@@ -584,21 +633,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/materialize.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="5" column="39649" lean-forward="false" selection-start-line="5" selection-start-column="39649" selection-end-line="5" selection-end-column="39649" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+>>>>>>> sinoptik_module
           <folding />
         </state>
       </provider>
@@ -613,24 +648,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/sass/style.sass">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="368">
           <caret line="37" column="7" lean-forward="false" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+=======
+        <state relative-caret-position="79">
+          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+>>>>>>> sinoptik_module
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/template/sass/_mobile.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+=======
+    <entry file="file://$PROJECT_DIR$/view/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+>>>>>>> sinoptik_module
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/site/index.php">
+    <entry file="file://$PROJECT_DIR$/view/main.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+=======
+        <state relative-caret-position="204">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+>>>>>>> sinoptik_module
           <folding />
         </state>
       </provider>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectTasksOptions" suppressed-tasks="SCSS;Compass SCSS">
+    <TaskOptions isEnabled="true">
+      <option name="arguments" value="compile $UnixSeparators($ProjectFileDir$)$ $UnixSeparators($FilePath$)$" />
+      <option name="checkSyntaxErrors" value="true" />
+      <option name="description" />
+      <option name="exitCodeBehavior" value="ERROR" />
+      <option name="fileExtension" value="sass" />
+      <option name="immediateSync" value="false" />
+      <option name="name" value="Compass Sass" />
+      <option name="output" value="$UnixSeparators($ProjectFileDir$)$" />
+      <option name="outputFilters">
+        <array />
+      </option>
+      <option name="outputFromStdout" value="false" />
+      <option name="program" value="C:/Ruby24-x64/bin/compass.bat" />
+      <option name="scopeName" value="Project Files" />
+      <option name="trackOnlyRoot" value="true" />
+      <option name="workingDir" value="$UnixSeparators($ProjectFileDir$)$" />
+      <envs />
+    </TaskOptions>
+  </component>
+</project>

@@ -1,0 +1,62 @@
+/**** Imports ****/
+
+@import "compass/reset"
+@import "_settings.sass"
+@import "_fonts.scss"
+
+
+/**** Styles *****/
+
+a
+  color: $primary-color-link!important
+
+i
+  color: $secondary-color!important
+
+body
+  background: $primary-color!important
+  height: 100%
+  font-family: Roboto
+
+nav
+  background-color: $primary-color!important
+  padding: 0 20px
+  font-weight: bold
+
+  a
+    color: $primary-color-nav-link!important
+
+.logo
+  height: 64px
+  position: relative
+  box-shadow: none
+
+  img
+    display: block
+    margin: 10px 0 0 30px
+    max-height: 60px
+
+nav
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0), 0 0px 0px 0px rgba(0,0,0,0)!important
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0), 0 0px 0px 0px rgba(0,0,0,0)!important
+
+  i.fa-bars
+    font-size: 30px
+
+.header-nav
+  nav
+    padding-left: 40px
+
+.row
+  position: relative
+  margin: 0 -20px
+
+.footer
+  width: 100%
+
+  .row
+    padding: 20px
+    margin-bottom: 0
+
+
+@import "_mobile.sass"

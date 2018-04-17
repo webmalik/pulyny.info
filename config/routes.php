@@ -16,6 +16,12 @@ return array(
     /* Контролер оголошень */
     'advertisement' => 'advertisement/index',
 
+    /* Контролер "Про Пулини" */
+    'about' => 'about/index',
+
+    /* Контролер зворотнього зв'язку */
+    'feedback' => 'feedback/index',
+
     /* Контроллер користувача*/
     'profile/([a-z,A-Z,1-9]+)' => 'user/profile/$1',
     'registration' => 'user/registration',

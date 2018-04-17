@@ -35,10 +35,9 @@
                         <i class="fa fa-bars"></i>
                     </a>
                     <ul class="left hide-on-med-and-down">
-                        <li class="active"><a href="#">Новини</a></li>
-                        <li><a href="#">Публічний чат</a></li>
-                        <li><a href="#">Підслухано</a></li>
-                        <li><a href="#">Всезнайка</a></li>
+                        <li <?php if($_SERVER['REQUEST_URI'] == "/") {?> class="active"<?php }?>><a href="/">Новини</a></li>
+                        <li <?php if($_SERVER['REQUEST_URI'] == "/chat"){?> class="active"<?php }?>><a href="/chat">Публічний чат</a></li>
+                        <li <?php if($_SERVER['REQUEST_URI'] == "/obeyed"){?> class="active"<?php }?>><a href="/obeyed">Підслухано</a></li>
                         <li><a href="#">Оголошення</a></li>
                         <li><a href="#">Магазини</a></li>
                         <li><a href="#">Конакти</a></li>

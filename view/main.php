@@ -38,7 +38,7 @@
                         <li <?php if($_SERVER['REQUEST_URI'] == "/") {?> class="active"<?php }?>><a href="/">Новини</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/chat"){?> class="active"<?php }?>><a href="/chat">Публічний чат</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/obeyed"){?> class="active"<?php }?>><a href="/obeyed">Підслухано</a></li>
-                        <li><a href="#">Оголошення</a></li>
+                        <li <?php if($_SERVER['REQUEST_URI'] == "/advertisement"){?> class="active"<?php }?>><a href="/advertisement">Оголошення</a></li>
                         <li><a href="#">Магазини</a></li>
                         <li><a href="#">Конакти</a></li>
                     </ul>

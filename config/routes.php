@@ -13,6 +13,9 @@ return array(
     /* Контролер розідлу "Підслухано" */
     'obeyed' => 'obeyed/index',
 
+    /* Контролер оголошень */
+    'advertisement' => 'advertisement/index',
+
     /* Контроллер користувача*/
     'profile/([a-z,A-Z,1-9]+)' => 'user/profile/$1',
     'registration' => 'user/registration',

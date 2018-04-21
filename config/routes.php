@@ -22,13 +22,14 @@ return array(
     /* Контролер зворотнього зв'язку */
     'feedback' => 'feedback/index',
 
-    /* Контроллер користувача*/
+    /* Контроллер користувача */
     'profile/([a-z,A-Z,1-9]+)' => 'user/profile/$1',
     'registration' => 'user/registration',
     'auth' => 'user/auth',
-    'logout' => 'user/logout'
+    'logout' => 'user/logout',
 
-
+    /* Панель адміністратора */
+    'admin' => 'admin/index',
 
     /*'computers' => 'computers/index',
     'computers/([a-z,A-Z,1-9]+)' => 'computers/view/$1',

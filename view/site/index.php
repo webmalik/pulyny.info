@@ -21,7 +21,7 @@
         </div>
     </div>
 </div>-->
-<? foreach ($news as $article)?>
+<? foreach ($news as $article) {?>
 <div class="col s12 m6">
     <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
@@ -42,6 +42,7 @@
         </div>
     </div>
 </div>
+<? } ?>
 <!--<div class="col s12 m6">
     <div class="card">
         <div class="card-image waves-effect waves-block waves-light">

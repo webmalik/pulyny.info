@@ -8,6 +8,7 @@ return array(
     '404' => 'site/404',
 
     /* Контролер новин */
+    'news/' => 'news/index',
     'news/([a-z,A-Z,1-9,-]+)'=>'news/view/$1',
 
     /* Контролер чату  */

@@ -4,7 +4,7 @@
         protected $paramsPath;
         protected $params;
 
-        public static function getItem($table, $params = array(), $where = Null, $order = Null, $limit = Null, $offset = Null) {
+        public static function getItem($table, $params = array(), $where = "", $order = "", $limit = "", $offset = "") {
             $settingsPath = ROOT . "/config/config.php";
             $settings = include($settingsPath);
             $table = $settings['prefix'].$table;
@@ -33,6 +33,7 @@
                 for($p=0; $p < count($params); $p++) {
                     $result[$i][$params[$p]] = $row[$params[$p]];
                 }
+                $i++;
             }
             return $result;
         }
@@ -48,7 +49,6 @@
                 $keys[] = $key;
                 $val[] = $value;
             }
-            print_r($val);
             $limit = count($keys) - 1;
             $sql = 'INSERT INTO '.$table.' (';
             for ($p = 0; $p < count($keys); $p++) {
@@ -70,5 +70,19 @@
             }
             $result->execute();
             return $result;
+        }
+
+        public static function deleteItem($table, $id) {
+            $settingsPath = ROOT . "/config/config.php";
+            $settings = include($settingsPath);
+            $table = $settings['prefix'].$table;
+
+            $db = DataBase::getConnection();
+
+            $sql = 'DELETE FROM '.$table.' WHERE id = :id';
+
+            $result = $db->prepare($sql);
+            $result->bindParam(':id', $id, PDO::PARAM_INT);
+            return $result->execute();
         }
     }

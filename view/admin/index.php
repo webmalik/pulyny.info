@@ -1,7 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Adamovych Dmytro
- * Date: 21.04.2018
- * Time: 21:17
- */
+<form method="post">
+    <input type="text" name="title" value="">
+    <input type="text" name="description" value="">
+    <input type="submit">
+</form>
+

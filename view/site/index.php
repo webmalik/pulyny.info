@@ -34,11 +34,11 @@
             <span class="card-title grey-text text-darken-4"><i class="fa fa-times-circle right"></i><?=$article['title']?></span>
             <p><?=$article['description']?></p>
             <div class="card-action">
-                <a href="/news/<?=strtolower($article['name'])?>.html">Читати далі...</a>
+                <a href="/news/<?=strtolower($article['name'])?>">Читати далі...</a>
             </div>
         </div>
         <div class="card-action">
-            <a href="/news/<?=strtolower($article['name'])?>.html">Читати далі...</a>
+            <a href="/news/<?=strtolower($article['name'])?>">Читати далі...</a>
         </div>
     </div>
 </div>

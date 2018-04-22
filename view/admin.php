@@ -24,7 +24,7 @@
             </a>
         </div>
         <div class="col s12 m6">
-
+            <span><?php print_r($title)?></span>
         </div>
     </div>
     <div class="container-fluid">

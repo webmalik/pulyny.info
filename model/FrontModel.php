@@ -4,7 +4,7 @@
         protected $paramsPath;
         protected $params;
 
-        public static function getSelect($table, $params = array(), $where = Null, $order = Null, $limit = Null, $offset = Null) {
+        public static function getItem($table, $params = array(), $where = Null, $order = Null, $limit = Null, $offset = Null) {
             $settingsPath = ROOT . "/config/config.php";
             $settings = include($settingsPath);
             $table = $settings['prefix'].$table;

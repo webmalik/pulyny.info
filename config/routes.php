@@ -7,6 +7,9 @@ return array(
     'not-admin' => 'site/notadmin',
     '404' => 'site/404',
 
+    /* Контролер новин */
+    'news/([a-z,A-Z,1-9,-]+)'=>'news/view/$1',
+
     /* Контролер чату  */
     'chat' => 'chat/index',
 

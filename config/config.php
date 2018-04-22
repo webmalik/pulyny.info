@@ -3,7 +3,7 @@ return array(
 
     // Налаштування підключення бази даних
     'host' => 'localhost',
-    'dbname' => 'pulyny',
+    'dbname' => 'pulyny-info',
     'user' => 'root',
     'password' => '',
 

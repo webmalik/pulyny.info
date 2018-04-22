@@ -2314,6 +2314,7 @@ nav i.fa-bars {
 }
 
 .main-panel {
+  margin-top: 10px;
   border: 1px solid #202020;
 }
 .main-panel .main-panel-header {
@@ -2323,6 +2324,14 @@ nav i.fa-bars {
   text-align: center;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 transparent, 0 0px 0px 0px transparent !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 transparent, 0 0px 0px 0px transparent !important;
+}
+.main-panel .main-panel-content .last-advertisement {
+  padding: 10px;
+}
+.main-panel .main-panel-content .last-advertisement a {
+  width: 100%;
+  display: block;
+  text-align: right;
 }
 .main-panel .main-panel-content .SinoptikInformer {
   padding: 10px;
@@ -2334,7 +2343,7 @@ nav i.fa-bars {
 
 .page-footer {
   color: #000000;
-  background-color: #ffffff;
+  background-color: #f7f7f7;
 }
 
 .footer {

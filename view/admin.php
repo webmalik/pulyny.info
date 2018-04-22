@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col s2">
                 <ul class="admin-nav">
-                    <li><a href="#">Повідомлення</a></li>
+                    <li><a href="#">Новини</a></li>
                     <li><a href="#">Повідомлення</a></li>
                     <li><a href="#">Повідомлення</a></li>
                     <li><a href="#">Повідомлення</a></li>

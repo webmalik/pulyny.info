@@ -2192,6 +2192,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /**** Colors schema **** */
+/******** Admin colors ******** */
 /**** Roboto ******/
 @font-face {
   font-family: "Roboto";
@@ -2218,17 +2219,61 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: local(Roboto Bold), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff");
   font-weight: 700;
 }
+.admin-panel {
+  background: #343a40;
+  height: 100vh;
+}
+.admin-panel .row .col {
+  padding: 0 !important;
+}
+
+.admin-nav {
+  width: 100%;
+}
+.admin-nav li {
+  width: 100%;
+}
+.admin-nav li a {
+  display: block;
+  width: 100%;
+  padding: 20px 30px;
+  color: #fff;
+}
+.admin-nav li a:hover {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 35px;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.admin-footer {
+  color: #fff;
+  background-color: #343a40;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer {
+  width: 100%;
+}
+.footer .row {
+  padding: 20px;
+  margin-bottom: 0;
+}
+
 /**** Styles **** */
 a {
-  color: #E53935 !important;
+  color: #E53935;
 }
 
 i {
-  color: #000000 !important;
+  color: #000000;
 }
 
 body {
-  background: #f7f7f7 !important;
+  background: #f7f7f7;
   height: 100%;
   font-family: Roboto;
 }

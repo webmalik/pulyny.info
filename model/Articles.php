@@ -14,6 +14,10 @@ class Articles extends FrontModel {
         return self::addItem("articles", $params);
     }
 
+    public static function editArticle($params, $where) {
+        return self::editItem("articles", $params, $where);
+    }
+
     public static function deleteArticle($id) {
         return self::deleteItem("articles", $id);
     }

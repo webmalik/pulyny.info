@@ -72,6 +72,36 @@
             return $result;
         }
 
+        public static function editItem($table, $params = array(), $where) {
+            $settingsPath = ROOT . "/config/config.php";
+            $settings = include($settingsPath);
+            $table = $settings['prefix'].$table;
+
+            $db = DataBase::getConnection();
+
+            foreach ($params as $key=>$value) {
+                $keys[] = $key;
+                $val[] = $value;
+            }
+            $limit = count($keys) - 1;
+
+            $sql = "UPDATE ".$table." SET ";
+            for ($p = 0; $p < count($keys); $p++) {
+                if ($p == $limit)
+                    $sql = $sql.$keys[$p].'=:'.$keys[$p]." ";
+                else
+                    $sql = $sql.$keys[$p].'=:'.$keys[$p].", ";
+            }
+            $sql = $sql."WHERE ".$where;
+
+            $result = $db->prepare($sql);
+            for ($p = 0; $p < count($keys); $p++) {
+                $result->bindParam(':' . $keys[$p], $val[$p], PDO::PARAM_STR);
+            }
+            $result->execute();
+            return $result;
+        }
+
         public static function deleteItem($table, $id) {
             $settingsPath = ROOT . "/config/config.php";
             $settings = include($settingsPath);

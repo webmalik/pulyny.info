@@ -11,7 +11,15 @@ class AdminController //extends FrontController
         }*/
         $article = new Articles();
         $template = new Template();
-        $template->adminrender('admin/index', array("title"=>"Admin"));
+        $template->adminrender('admin/index');
+        return true;
+    }
+
+    public function actionNews() {
+        $article = new Articles();
+        $news = $article->getAllDescArticles();
+        $template = new Template();
+        $template->adminrender('admin/news', array("news"=>$news));
         return true;
     }
 }

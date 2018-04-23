@@ -2223,9 +2223,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: #343a40;
   height: 100vh;
 }
-.admin-panel .row .col {
-  padding: 0 !important;
-}
 
 .admin-nav {
   width: 100%;
@@ -2244,6 +2241,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 20px 35px;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
+}
+
+.admin-container {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+}
+.admin-container .article_add {
+  position: relative;
+}
+.admin-container .article_add a {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+}
+
+.article {
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 10px 0 0;
+}
+.article .article_img img {
+  padding: 20px 0;
+  width: 100%;
+  float: left;
+}
+.article .article_title {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.article_menu {
+  display: block;
+  width: 100%;
+  background: #373737;
+  padding: 20px;
+}
+.article_menu a {
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+}
+.article_menu a i {
+  color: #fff;
+  font-size: 20px;
 }
 
 .admin-footer {

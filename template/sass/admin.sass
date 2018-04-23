@@ -1,9 +1,6 @@
 .admin-panel
   background: $primary-color-admin
   height: 100vh
-  .row
-    .col
-      padding: 0!important
 
 .admin-nav
   width: 100%
@@ -21,6 +18,49 @@
         padding: 20px 35px
         -webkit-transition: .3s ease-out
         transition: .3s ease-out
+
+.admin-container
+  position: relative
+  background: #fff
+  padding: 20px
+
+  .article_add
+    position: relative
+    a
+      position: absolute
+      top: -20px
+      right: 20px
+
+.article
+  position: relative
+  background: rgba(0, 0, 0, 0.1)
+  margin: 10px 0 0
+
+
+  .article_img
+    img
+      padding: 20px 0
+      width: 100%
+      float: left
+
+  .article_title
+    padding: 20px
+    font-weight: bold
+    font-size: 20px
+
+.article_menu
+  display: block
+  width: 100%
+  background: #373737
+  padding: 20px
+
+  a
+    display: inline-block
+    padding: 10px
+    color: #fff
+    i
+      color: #fff
+      font-size: 20px
 
 
 .admin-footer

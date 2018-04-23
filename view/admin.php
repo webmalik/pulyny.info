@@ -24,21 +24,21 @@
             </a>
         </div>
         <div class="col s12 m6">
-            <span><?php print_r($title)?></span>
+
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col s2">
                 <ul class="admin-nav">
-                    <li><a href="#">Новини</a></li>
+                    <li><a href="/admin/news">Новини</a></li>
                     <li><a href="#">Повідомлення</a></li>
                     <li><a href="#">Повідомлення</a></li>
                     <li><a href="#">Повідомлення</a></li>
                     <li><a href="#">Повідомлення</a></li>
                 </ul>
             </div>
-            <div class="col s10">
+            <div class="col s10 admin-container">
                 <?=$content?>
             </div>
         </div>

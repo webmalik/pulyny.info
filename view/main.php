@@ -37,7 +37,6 @@
                     <ul class="left hide-on-med-and-down">
                         <li <?php if($_SERVER['REQUEST_URI'] == "/") {?> class="active"<?php }?>><a href="/">Новини</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/chat"){?> class="active"<?php }?>><a href="/chat">Публічний чат</a></li>
-                        <li <?php if($_SERVER['REQUEST_URI'] == "/obeyed"){?> class="active"<?php }?>><a href="/obeyed">Підслухано</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/advertisement"){?> class="active"<?php }?>><a href="/advertisement">Оголошення</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/about"){?> class="active"<?php }?>><a href="/about">Про Пулини</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/feedback"){?> class="active"<?php }?>><a href="/feedback">Зворотній зв'язок</a></li>
@@ -45,7 +44,6 @@
                     <ul class="side-nav left" id="mobile-demo" style="transform: translateX(0px);">
                         <li <?php if($_SERVER['REQUEST_URI'] == "/") {?> class="active"<?php }?>><a href="/">Новини</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/chat"){?> class="active"<?php }?>><a href="/chat">Публічний чат</a></li>
-                        <li <?php if($_SERVER['REQUEST_URI'] == "/obeyed"){?> class="active"<?php }?>><a href="/obeyed">Підслухано</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/advertisement"){?> class="active"<?php }?>><a href="/advertisement">Оголошення</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/about"){?> class="active"<?php }?>><a href="/about">Про Пулини</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/feedback"){?> class="active"<?php }?>><a href="/feedback">Зворотній зв'язок</a></li>

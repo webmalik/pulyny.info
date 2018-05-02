@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Title -->
-    <title>Пулини.info</title>
+    <title>Панель адміністратора - Пулини.info</title>
     <!-- Styles -->
     <link href="<?=HOST?>/template/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?=HOST?>/template/css/materialize.min.css" rel="stylesheet">
     <link href="<?=HOST?>/template/css/style.css" rel="stylesheet">
+
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="container-fluid admin-panel">
@@ -27,25 +31,20 @@
 
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col s2">
-                <ul class="admin-nav">
-                    <li><a href="/admin/news">Новини</a></li>
-                    <li><a href="#">Повідомлення</a></li>
-                    <li><a href="#">Повідомлення</a></li>
-                    <li><a href="#">Повідомлення</a></li>
-                    <li><a href="#">Повідомлення</a></li>
-                </ul>
-            </div>
-            <div class="col s10 admin-container">
-                <?=$content?>
-            </div>
+    <div class="row">
+        <div class="col s12 m2">
+            <ul class="admin-nav">
+                <li><a href="/admin/news">Новини</a></li>
+                <li><a href="#">Повідомлення</a></li>
+                <li><a href="#">Повідомлення</a></li>
+                <li><a href="#">Повідомлення</a></li>
+                <li><a href="#">Повідомлення</a></li>
+            </ul>
         </div>
-
+        <div class="col s12 m10 admin-container">
+            <?=$content?>
+        </div>
     </div>
-
-
     <footer class="admin-footer">
         <div class="footer">
             <div class="row z-depth-2">
@@ -60,12 +59,14 @@
     </footer>
 </div>
 
-<!-- SCRIPTS -->
-<script type="text/javascript" src="<?=HOST?>/template/js/jquery.min.js"></script>
+<!-- Include jQuery lib. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <!-- Materialize JS -->
 <script type="text/javascript" src="<?=HOST?>/template/js/materialize.min.js"></script>
 <script type="text/javascript" src="<?=HOST?>/template/js/main.js"></script>
+<!-- Include Editor JS files. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
 
 </body>
 </html>

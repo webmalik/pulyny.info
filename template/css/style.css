@@ -2219,9 +2219,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: local(Roboto Bold), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff");
   font-weight: 700;
 }
+a[href="https://www.froala.com/wysiwyg-editor?k=u"] {
+  display: none !important;
+  position: absolute;
+  top: -99999999px;
+}
+
 .admin-panel {
   background: #343a40;
   height: 100vh;
+}
+.admin-panel .row {
+  background: #343a40;
+  margin-bottom: 0px;
+}
+.admin-panel .fa-plus {
+  color: #fff;
 }
 
 .admin-nav {
@@ -2243,34 +2256,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: 0.3s ease-out;
 }
 
-.admin-container {
-  position: relative;
-  background: #fff;
-  padding: 20px;
-}
-.admin-container .article_add {
+.article_add {
   position: relative;
 }
-.admin-container .article_add a {
+.article_add a {
   position: absolute;
   top: -20px;
   right: 20px;
 }
 
-.article {
+.article_description {
   position: relative;
-  background: rgba(0, 0, 0, 0.1);
-  margin: 10px 0 0;
 }
-.article .article_img img {
-  padding: 20px 0;
-  width: 100%;
-  float: left;
+.article_description img {
+  padding: 0 20px;
+  max-width: 35%;
+  display: inline-block;
+  height: auto;
 }
-.article .article_title {
-  padding: 20px;
-  font-weight: bold;
-  font-size: 20px;
+.article_description span.article_text {
+  display: inline-block;
+  position: absolute;
+  top: 0;
 }
 
 .article_menu {
@@ -2291,11 +2298,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .admin-footer {
   color: #fff;
-  background-color: #343a40;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .footer {

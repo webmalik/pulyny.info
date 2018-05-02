@@ -14,9 +14,6 @@ return array(
     /* Контролер чату  */
     'chat' => 'chat/index',
 
-    /* Контролер розідлу "Підслухано" */
-    'obeyed' => 'obeyed/index',
-
     /* Контролер оголошень */
     'advertisement' => 'advertisement/index',
 
@@ -35,6 +32,7 @@ return array(
     /* Панель адміністратора */
     'admin' => 'admin/index',
     'admin/news' => 'admin/news',
+    'admin/news/add'=>'admin/addnews/',
 
     /*'computers' => 'computers/index',
     'computers/([a-z,A-Z,1-9]+)' => 'computers/view/$1',

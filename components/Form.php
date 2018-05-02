@@ -5,35 +5,27 @@ class Form
 
     public static function addInputText($name, $label, $val="") {
 
-        echo "<label for=\"$name\">$label:</label>";
-        echo "<input type=\"text\" name=\"$name\" value=\"";
-            if($val != ""){
-                echo $val[$name];
-            }
-        echo "\" placeholder=\"$label\" required oninvalid=\"this.setCustomValidity('Неправильно введене $label')\" />";
-
-    }
-    
-    public static function addInputTextNR($name, $label, $val="") {
-
-        echo "<label for=\"$name\">$label:</label>";
-        echo "<input type=\"text\" name=\"$name\" value=\"";
-            if($val != ""){
-                echo $val[$name];
-            }
-        echo "\" placeholder=\"$label\"/>";
-
-    }
-
-    public static function addButtonSubmitK($label) {
-
-        echo "<button class=\"btn btn-success btn-md \" name=\"submit\" type=\"submit\">$label</button>";
+        echo "<div class=\"input-field\">";
+        echo "<input name=\"$name\" type=\"text\" class=\"validate\" value=\"";
+        if(isset($val[$name])){
+            echo $val[$name];
+        }else {
+            echo "";
+        }
+        echo "\"/>";
+        echo "<label for=\"$name\"";
+        if(isset($val[$name])){
+            echo "class=\"active\">$label</label>";
+        }else {
+            echo "class=\"\">$label</label>";
+        }
+        echo "</div>";
 
     }
     
     public static function addButtonSubmit($label) {
 
-        echo "<button class=\"submit\" name=\"submit\" type=\"submit\">$label</button>";
+        echo "<button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"submit\"><i class='fa fa-plus left'></i>$label</button>";
 
     }
 

@@ -1,6 +1,18 @@
+a[href="https://www.froala.com/wysiwyg-editor?k=u"]
+  display: none !important
+  position: absolute
+  top: -99999999px
+
 .admin-panel
   background: $primary-color-admin
   height: 100vh
+
+  .row
+    background: $primary-color-admin
+    margin-bottom: 0px
+
+  .fa-plus
+    color: #fff
 
 .admin-nav
   width: 100%
@@ -19,34 +31,41 @@
         -webkit-transition: .3s ease-out
         transition: .3s ease-out
 
-.admin-container
+//.admin-container
   position: relative
   background: #fff
   padding: 20px
 
-  .article_add
-    position: relative
-    a
-      position: absolute
-      top: -20px
-      right: 20px
+.article_add
+  position: relative
+  a
+    position: absolute
+    top: -20px
+    right: 20px
 
-.article
+//.article
   position: relative
   background: rgba(0, 0, 0, 0.1)
   margin: 10px 0 0
 
+.article_description
+  position: relative
 
-  .article_img
-    img
-      padding: 20px 0
-      width: 100%
-      float: left
+  img
+    padding: 0 20px
+    max-width: 35%
+    display: inline-block
+    height: auto
 
-  .article_title
-    padding: 20px
-    font-weight: bold
-    font-size: 20px
+  span.article_text
+    display: inline-block
+    position: absolute
+    top: 0
+
+//.article_title
+  padding: 20px
+  font-weight: bold
+  font-size: 20px
 
 .article_menu
   display: block
@@ -65,11 +84,6 @@
 
 .admin-footer
   color: #fff
-  background-color: $primary-color-admin
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
 
 .footer
   width: 100%

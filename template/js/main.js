@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    $('textarea').froalaEditor();
     setTimeout(function () {
         $(".progress").css("visibility", "hidden");
     },1000);
@@ -16,5 +17,5 @@ $( document ).ready(function() {
     setInterval(function () {
         $('.carousel').carousel('next');
     }, 10000);
-
+    M.updateTextFields();
 });

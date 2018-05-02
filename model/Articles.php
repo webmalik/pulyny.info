@@ -3,7 +3,7 @@
 class Articles extends FrontModel {
 
     public static function getAllDescArticles() {
-         return self::getItem("articles", array("id", "name", "description", "title"));
+         return self::getItem("articles", array("id", "name", "description", "title", "image"));
     }
 
     public static function getArticle($name) {

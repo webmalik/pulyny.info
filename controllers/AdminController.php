@@ -30,10 +30,15 @@ class AdminController //extends FrontController
         $errors = '';
 
         if(isset($_POST["submit"])) {
+            $uploaddir = ROOT.'\uploads\articles\\';
+            $uploadfile = $uploaddir . basename($_FILES['image']['name']);
+            if(is_uploaded_file($_FILES['image']['tmp_name'])) {
+                move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
+            }
             $title = trim($_POST["title"]);
             $description = trim($_POST["description"]);
             $text = trim($_POST["text"]);
-            $image = trim($_POST["image"]);
+            $image = trim("\uploads\articles\\".basename($_FILES['image']['name']));
             $meta_description = trim($_POST["meta_description"]);
             $meta_keywords = trim($_POST["meta_keywords"]);
 

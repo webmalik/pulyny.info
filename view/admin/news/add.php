@@ -25,11 +25,20 @@
                     <?php
                 } else {
                     ?>
-                    <form class="login_form" action="" method="post">
+                    <form class="login_form" enctype="multipart/form-data" action="" method="post">
                         <?php Form::addInputText("title", "Назва")?>
                         <?php Form::addInputText("description", "Короткий зміст")?>
                         <textarea name="text" id="" class="froala" cols="30" rows="100"></textarea>
-                        <?php Form::addInputText("image", "Зображення")?>
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Файл</span>
+                                <input type="file" name="image">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+
                         <?php Form::addInputText("meta_description", "Мета опис")?>
                         <?php Form::addInputText("meta_keywords", "Мета ключові слова")?>
                 <?php }?>

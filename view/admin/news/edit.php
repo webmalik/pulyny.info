@@ -16,53 +16,46 @@
                     </div>
                     <?php
                 }
-                if(isset($result) && $result != NULL) {
+                if(isset($result) && $result != 0) {
                     ?>
                     <div class="bs-callout bs-callout-success">
                         <h4>Успішне додавання</h4>
-                        <p>Ви успішно додали статью до бази даних <b></p>
+                        <p>Ви успішно додали статью до бази даних <b><?=$result?> </b></p>
                     </div>
                     <?php
                 } else {
                     ?>
                     <form class="login_form" enctype="multipart/form-data" action="" method="post">
                         <div class="input-field">
-                            <input type="text" name="title" onkeyup="translit()">
-                            <label for="title">Назва</label>
+                            <input type="text" name="title" onkeyup="translit()" value="<?=$article[0]["title"]?>">
+                            <label for="title" class="active">Назва</label>
                         </div>
                         <div class="input-field">
-                            <input type="text" name="name" id="article_name" disabled>
+                            <input type="text" name="name" id="article_name" value="<?=$article[0]["name"]?>">
                             <label for="description" class="active">Аліас</label>
                         </div>
-                        <?php Form::addInputText("description", "Короткий зміст")?>
-                        <textarea name="text" id="" class="froala" cols="30" rows="100"></textarea>
+                        <?php Form::addInputText("description", "Короткий зміст",$article[0])?>
+                        <textarea name="text" id="" class="froala" cols="30" rows="100">
+                            <?=$article[0]["text"]?>
+                        </textarea>
                         <div class="file-field input-field">
                             <div class="btn">
                                 <span>Файл</span>
-                                <input type="file" name="image">
+                                <input type="file" name="image" value="<?=$article[0]["image"]?>">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">
                             </div>
                         </div>
-                        <?php Form::addInputText("meta_description", "Мета опис")?>
-                        <?php Form::addInputText("meta_keywords", "Мета ключові слова")?>
+
+                        <?php Form::addInputText("meta_description", "Мета опис",$article[0])?>
+                        <?php Form::addInputText("meta_keywords", "Мета ключові слова",$article[0])?>
                 <?php }?>
             </div>
-            <? if(isset($result) && $result != NULL) { ?>
-                <div class="card-action">
-                    <a href="/admin/news/edit/"><i class="fa fa-edit"></i>Повернутись</a>
-                </div>
-                <?php
-                } else {
-            ?>
             <div class="card-action">
                 <?php Form::addButtonSubmit("Додати статью")?>
                     </form>
             </div>
-                <?php
-            }
-            ?>
         </div>
     </div>
 </div>

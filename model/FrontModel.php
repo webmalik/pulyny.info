@@ -11,18 +11,19 @@
 
             $db = DataBase::getConnection();
             $sel = "SELECT * FROM $table ";
-            if (isset($where)) {
-                $sel = $sel.$where;
+            if (isset($where) && $where != NULL) {
+                $sel = $sel." WHERE ".$where;
             }
-            if(isset($order)) {
-                $sel = $sel.$order;
+            if(isset($order) && $order != NULL) {
+                $sel = $sel." ".$order;
             }
-            if (isset($limit)) {
-                $sel = $sel.$limit;
+            if (isset($limit) && $limit != NULL) {
+                $sel = $sel." ".$sel.$limit;
             }
-            if(isset($offset)) {
-                $sel = $sel.$offset;
+            if(isset($offset) && $offset != NULL) {
+                $sel = $sel." ".$sel.$offset;
             }
+            echo $sel;
             // Запрос к БД
             $query = $db->query($sel);
 

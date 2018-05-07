@@ -1,9 +1,9 @@
 $( document ).ready(function() {
-    $('textarea').froalaEditor();
     setTimeout(function () {
         $(".progress").css("visibility", "hidden");
     },1000);
 
+    $('textarea').froalaEditor();
 
     $(".button-collapse").sideNav({
             menuWidth: 300,

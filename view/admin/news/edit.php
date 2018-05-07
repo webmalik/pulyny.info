@@ -16,11 +16,11 @@
                     </div>
                     <?php
                 }
-                if(isset($result) && $result != 0) {
+                if(isset($result) && $result != NULL) {
                     ?>
                     <div class="bs-callout bs-callout-success">
-                        <h4>Успішне додавання</h4>
-                        <p>Ви успішно додали статью до бази даних <b><?=$result?> </b></p>
+                        <h4>Редагування успішне</h4>
+                        <p>Ви успішно відредагували статью із бази даних <b></p>
                     </div>
                     <?php
                 } else {
@@ -44,7 +44,7 @@
                                 <input type="file" name="image" value="<?=$article[0]["image"]?>">
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
+                                <input class="file-path validate" name="edit_img" value="<?=$article[0]["image"]?>" type="text">
                             </div>
                         </div>
 
@@ -52,10 +52,20 @@
                         <?php Form::addInputText("meta_keywords", "Мета ключові слова",$article[0])?>
                 <?php }?>
             </div>
-            <div class="card-action">
-                <?php Form::addButtonSubmit("Додати статью")?>
+            <? if(isset($result) && $result != NULL) { ?>
+                <div class="card-action">
+                    <a href="/admin/news/edit/"><i class="fa fa-edit"></i>Повернутись</a>
+                </div>
+                <?php
+            } else {
+                ?>
+                <div class="card-action">
+                    <?php Form::addButtonSubmit("Редагувати статью")?>
                     </form>
-            </div>
+                </div>
+                <?php
+            }
+            ?>
         </div>
     </div>
 </div>

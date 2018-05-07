@@ -23,7 +23,6 @@
             if(isset($offset) && $offset != NULL) {
                 $sel = $sel." ".$sel.$offset;
             }
-            echo $sel;
             // Запрос к БД
             $query = $db->query($sel);
 

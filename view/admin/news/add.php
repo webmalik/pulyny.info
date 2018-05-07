@@ -31,7 +31,7 @@
                             <label for="title">Назва</label>
                         </div>
                         <div class="input-field">
-                            <input type="text" name="name" id="article_name" disabled>
+                            <input type="text" name="name" id="article_name">
                             <label for="description" class="active">Аліас</label>
                         </div>
                         <?php Form::addInputText("description", "Короткий зміст")?>
@@ -42,7 +42,7 @@
                                 <input type="file" name="image">
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
+                                <input class="file-path validate" name="edit_img" type="text">
                             </div>
                         </div>
                         <?php Form::addInputText("meta_description", "Мета опис")?>

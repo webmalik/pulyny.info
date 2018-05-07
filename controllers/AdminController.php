@@ -31,18 +31,23 @@ class AdminController //extends FrontController
         $errors = '';
 
         if(isset($_POST["submit"])) {
-            $uploaddir = ROOT.'\uploads\articles\\';
-            $uploadfile = $uploaddir . basename($_FILES['image']['name']);
-            if(is_uploaded_file($_FILES['image']['tmp_name'])) {
-                move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
-            }
             $title = trim($_POST["title"]);
             $name = trim($_POST["name"]);
             $description = trim($_POST["description"]);
             $text = trim($_POST["text"]);
-            $image = trim("\uploads\articles\\".basename($_FILES['image']['name']));
             $meta_description = trim($_POST["meta_description"]);
             $meta_keywords = trim($_POST["meta_keywords"]);
+
+            if($_FILES['image']['size'] > 0) {
+                $uploaddir = ROOT.'\uploads\articles\\';
+                $uploadfile = $uploaddir . basename($_FILES['image']['name']);
+                if(is_uploaded_file($_FILES['image']['tmp_name'])) {
+                    move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
+                }
+                $image = trim("\uploads\articles\\".basename($_FILES['image']['name']));
+            } else {
+                $image = trim($_POST["edit_img"]);
+            }
 
             if($errors == false) {
                 $add_news = $article->addArticle(array("title"=>$title, "name"=>$name, "description"=>$description, "text"=>$text, "image"=>$image, "meta_description"=>$meta_description, "meta_keywords"=>$meta_keywords));
@@ -57,9 +62,9 @@ class AdminController //extends FrontController
         $article = new Articles();
         $art=$article->getArticle($slug);
 
+        $edit_news ="";
         $title = "";
         $description = "";
-
         $text = "";
         $name = "";
         $image = "";
@@ -69,25 +74,31 @@ class AdminController //extends FrontController
         $errors = '';
 
         if(isset($_POST["submit"])) {
-            $uploaddir = ROOT.'\uploads\articles\\';
-            $uploadfile = $uploaddir . basename($_FILES['image']['name']);
-            if(is_uploaded_file($_FILES['image']['tmp_name'])) {
-                move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
-            }
+
             $title = trim($_POST["title"]);
             $name = trim($_POST["name"]);
             $description = trim($_POST["description"]);
             $text = trim($_POST["text"]);
-            $image = trim("\uploads\articles\\".basename($_FILES['image']['name']));
             $meta_description = trim($_POST["meta_description"]);
             $meta_keywords = trim($_POST["meta_keywords"]);
-            print_r($_POST);
+
+            if($_FILES['image']['size'] > 0) {
+                $uploaddir = ROOT.'\uploads\articles\\';
+                $uploadfile = $uploaddir . basename($_FILES['image']['name']);
+                if(is_uploaded_file($_FILES['image']['tmp_name'])) {
+                    move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
+                }
+                $image = trim("\uploads\articles\\".basename($_FILES['image']['name']));
+            } else {
+                $image = trim($_POST["edit_img"]);
+            }
+
             if($errors == false) {
-                $add_news = $article->editArticle(array("title"=>$title, "name"=>$name, "description"=>$description, "text"=>$text, "image"=>$image, "meta_description"=>$meta_description, "meta_keywords"=>$meta_keywords), "name=\"".$slug."\"");
+                $edit_news = $article->editArticle(array("title"=>$title, "name"=>$name, "description"=>$description, "text"=>$text, "image"=>$image, "meta_description"=>$meta_description, "meta_keywords"=>$meta_keywords), "name=\"".$slug."\"");
             }
         }
         $template = new Template();
-        $template->adminrender('admin/news/edit', array("article"=>$art));
+        $template->adminrender('admin/news/edit', array("article"=>$art, "result"=>$edit_news));
         return true;
     }
 

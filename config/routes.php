@@ -36,13 +36,6 @@ return array(
     'admin/news/edit/([a-z,A-Z,1-9,-]+)'=>'admin/editnews/$1',
     'admin/news/delete/([a-z,A-Z,1-9,-]+)'=>'admin/deletenews/$1',
 
-    /*'computers' => 'computers/index',
-    'computers/([a-z,A-Z,1-9]+)' => 'computers/view/$1',
-    'computers/add' => 'computers/add',
-    'computers/edit/([1-9]+)' => 'computers/edit/$1',
-    'computers/delete/([a-z,A-Z,1-9]+)' => 'computers/delete/$1',
-    'computers/addpo/([a-z,A-Z,1-9]+)' => 'computers/addpo/$1',*/
-
 
 
 

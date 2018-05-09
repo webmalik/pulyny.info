@@ -10,21 +10,27 @@ class UserController
             $login = trim($_POST["login"]);
             $password = trim($_POST["password"]);
             $password = $user->cryptPass($password);
+            $pin = trim($_POST['pin']);
+            
             if(!$user->checkLogin($login)) {
                 $errors[] = "Логін повинен містити лише латинські літери та цифри";
-            }else if(!$user->checkLoginExists($login)) {
+            } else if(!$user->checkLoginExists($login)) {
                 $errors[] = "Даний Логін не зареєстрований";
             } else if ($user->checkBlock($login)) {
                 $errors[] = "Даний користувач заблокований";
+            } else if(isset($_POST['is_admin']) && $user->checkAdminData($login, $password, $pin) == NULL) {
+                $errors[] = "Pin-код адмністратора не вірний";
             } else {
                 $result = $user->checkUserData($login, $password);
                 if($result === false) {
                     $errors[] = "Неправильно введений пароль";
                 }
             }
-            //echo $result;
             if($errors == false) {
                 $user->auth($result);
+            }
+            if(isset($_POST['is_admin']) && $user->checkAdminData($login, $password, $pin) != NULL) {
+                $_SESSION['user_admin'] = $user->checkAdminData($login, $password, $pin);
             }
         }
         $data = array("result"=>$result, "errors"=>$errors);

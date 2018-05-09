@@ -72,6 +72,16 @@ class User extends FrontModel {
         return false;
     }
 
+    public static function checkAdminData($login, $password, $pin)
+    {
+        $key = self::cryptAdminKey($password, $pin);
+        $user = self::getItem("users", array("id", "login", "password", "is_admin"), "login=\"".$login."\" and password=\"".$password."\" and is_admin=\"".$key."\"");
+        if ($user) {
+            return $user[0]['is_admin'];
+        }
+        return false;
+    }
+
     public static function register($first_name, $middle_name, $last_name, $viddil, $email, $login, $password) {
         $db = DataBase::getConnection();
 
@@ -89,7 +99,7 @@ class User extends FrontModel {
         return $result->execute();
     }
 
-    public function cryptPass($password) {
+    public static function cryptPass($password) {
         $paramsPath = ROOT . "/config/config.php";
         $params = include($paramsPath);
 
@@ -100,10 +110,10 @@ class User extends FrontModel {
         return $password;
     }
 
-    public function cryptAdminKey($password, $pin) {
+    public static function cryptAdminKey($password, $pin) {
         $paramsPath = ROOT . "/config/config.php";
         $params = include($paramsPath);
-        $pass = $this->cryptPass($password);
+        $pass = self::cryptPass($password);
         $key = $params['secret_key'];
 
         $crypt = md5($pass.$pin.$key);
@@ -121,7 +131,7 @@ class User extends FrontModel {
         $_SESSION['user_fname'] = $info[0]['first_name'];
         $_SESSION['user_lname'] = $info[0]['last_name'];
         $_SESSION['user_image'] = $info[0]['image'];
-        $_SESSION['user_admin'] = $info[0]['is_admin'];
+
     }
 
     public static function logout()

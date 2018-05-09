@@ -53,12 +53,23 @@ class Router {
         }
 
         // Створюємо об'єкт та викликаємо метод (тобто action)
-
-        $controllerObject = new $controllerName;
+        if (class_exists($controllerName)) {
+            $controllerObject = new $controllerName;
+            if (method_exists($controllerObject, $actionName)) {
+                $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
+            } else {
+                header("Location: /404");
+            }
+        } else {
+            header("Location: /404");
+        }
+        /*$controllerObject = new $controllerName;
         $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
         if($result != null) {
             exit();
-        }
+        }else {
+            header("Location: /404");
+        }*/
     }
 
 

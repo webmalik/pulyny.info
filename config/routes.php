@@ -4,11 +4,11 @@ return array(
 
     /* Основний контроллер */
     '' => 'site/index',
-    'not-admin' => 'site/notadmin',
     '404' => 'site/404',
+    'notrights' => 'site/notrights',
 
     /* Контролер новин */
-    'news/' => 'news/index',
+    'news' => 'news/index',
     'news/([a-z,A-Z,1-9,-]+)'=>'news/view/$1',
 
     /* Контролер чату  */
@@ -35,9 +35,4 @@ return array(
     'admin/news/add'=>'admin/addnews/',
     'admin/news/edit/([a-z,A-Z,1-9,-]+)'=>'admin/editnews/$1',
     'admin/news/delete/([a-z,A-Z,1-9,-]+)'=>'admin/deletenews/$1',
-
-
-
-
-
 );

@@ -11,4 +11,20 @@ class SiteController //extends FrontController
         return true;
 
     }
+
+    public function action404() {
+
+        $template = new Template();
+        $template->render('site/404');
+        return true;
+
+    }
+
+    public function actionNotrights() {
+
+        $template = new Template();
+        $template->render('site/notrights');
+        return true;
+
+    }
 }

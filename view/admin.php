@@ -1,3 +1,6 @@
+<?php if(!User::checkLoggedAdmin()){
+    header("Location: /notright");
+}?>
 <!DOCTYPE html>
 <html lang="ua">
 <head>

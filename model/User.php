@@ -151,13 +151,10 @@ class User extends FrontModel {
 
     public static function checkLoggedAdmin()
     {
-        if (isset($_SESSION['user_id'])) {
-            $user = self::getUserById($_SESSION['user']);
-            if($user['admin'] == 1) {
-                return true;
-            }else {
-                return false;
-            }
+        if (isset($_SESSION['user_admin'])) {
+            return true;
+        }else {
+            return false;
         }
     }
 

@@ -2433,6 +2433,17 @@ nav i.fa-bars {
   margin-bottom: 0;
 }
 
+.block404 img {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.block404 a {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
 @media only screen and (max-width: 992px) {
   .logo {
     text-align: center;

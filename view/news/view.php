@@ -1,7 +1,7 @@
 <? foreach ($article as $item) {?>
-<div class="col s12">
+<div class="col s12 article_view">
     <h1><?=$item['title']?></h1>
-    <img class="activator" src="<?=HOST?>/images/article-2.jpg">
+    <img class="activator" src="<?=HOST.$item['image']?>">
     <?=$item['text']?>
 </div>
 <? } ?>

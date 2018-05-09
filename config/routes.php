@@ -24,10 +24,10 @@ return array(
     'feedback' => 'feedback/index',
 
     /* Контроллер користувача */
-    'profile/([a-z,A-Z,1-9]+)' => 'user/profile/$1',
-    'registration' => 'user/registration',
-    'auth' => 'user/auth',
-    'logout' => 'user/logout',
+    'profile/([a-z,A-Z,1-9]+)' => 'users/profile/$1',
+    'registration' => 'users/registration',
+    'auth' => 'users/auth',
+    'logout' => 'users/logout',
 
     /* Панель адміністратора */
     'admin' => 'admin/index',

@@ -2358,6 +2358,15 @@ nav i.fa-bars {
   padding-left: 40px;
 }
 
+.article_view h1 {
+  padding: 10px 0px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.article_view img {
+  max-width: 100%;
+}
+
 .main-panel {
   margin-top: 10px;
   border: 1px solid #202020;
@@ -2384,6 +2393,27 @@ nav i.fa-bars {
 
 .row {
   position: relative;
+}
+
+.user {
+  text-align: right;
+  margin-right: 10px;
+}
+.user .user_info {
+  display: inline-block;
+}
+.user .user_info a, .user .user_info span {
+  display: block;
+  padding: 5px 20px;
+}
+.user .user_img {
+  display: inline-block;
+}
+.user .user_img img {
+  max-width: 80px;
+}
+.user .user_auth a {
+  padding: 20px;
 }
 
 .page-footer {

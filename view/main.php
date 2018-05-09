@@ -24,7 +24,20 @@
             </a>
         </div>
         <div class="col s12 m6">
-
+            <div class="user">
+                <!--<div class="user_info">
+                    <span>Адамович Дмитро (WebMaLik)</span>
+                    <a class="waves-effect waves-teal" href="#">Профіль</a>
+                    <a class="waves-effect waves-teal" href="#">Вихід</a>
+                </div>
+                <div class="user_img">
+                    <img src="<?/*= HOST */?>/uploads/users/user.png" alt="">
+                </div>-->
+                <div class="user_auth">
+                    <a class="waves-effect waves-teal" href="#">Реєстрація</a>
+                    <a class="waves-effect waves-teal" href="#">Вхід</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">

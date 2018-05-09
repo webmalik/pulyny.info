@@ -22,10 +22,18 @@ class Form
         echo "</div>";
 
     }
+
+    public static function addInputPass($name, $label) {
+
+        echo "<div class=\"input-field\">";
+        echo "<input name=\"$name\" type=\"password\" class=\"validate\"/>";
+        echo "<label for=\"$name\" class=\"\">$label</label>";
+        echo "</div>";
+    }
     
     public static function addButtonSubmit($label) {
 
-        echo "<button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"submit\"><i class='fa fa-plus left'></i>$label</button>";
+        echo "<button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"submit\"></i>$label</button>";
 
     }
 
@@ -48,25 +56,15 @@ class Form
 
     }
 
-    public static function addSelectUserVydatku($list, $name, $label, $val="") {
-
-        echo "<label for=\"$name\">$label:</label>";
-        echo "<select name=\"$name\">";
-        if (is_array($list)) {
-            foreach ($list as $item) {
-                if($item['viddil'] == 2) {
-                    if($item['id'] == $val) {
-                        echo "<option selected value=".$item['id'].">";
-                    } else {
-                        echo "<option value=".$item['id'].">";
-                    }
-                }
-                echo $item["last_name"].' '.$item["first_name"].' '.$item["middle_name"];
-                echo "</option>";
-            }
-        }
-        echo "</select>";
-
+    public static function addCheckBox($label, $id) {
+        echo "
+            <p>
+            <label>
+                <input type=\"checkbox\" id='$id' name='$id' value='$id'/>
+                <span>$label</span>
+            </label>
+            </p>
+            ";
     }
 
 }

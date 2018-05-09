@@ -1,7 +1,6 @@
 <?php
 
-class User
-{
+class User extends FrontModel {
 
     public static function checkText($text) {
         if(strlen($text) > 3) {
@@ -32,15 +31,8 @@ class User
     }
 
     public static function checkLoginExists($login) {
-        $db = DataBase::getConnection();
-
-        $sql = 'SELECT COUNT(*) FROM users WHERE login = :login';
-
-        $result = $db->prepare($sql);
-        $result->bindParam(':login', $login, PDO::PARAM_STR);
-        $result->execute();
-
-        if($result->fetchColumn()) {
+        $user = self::getItem("users", array("id", "login"), "login=\"".$login."\"");
+        if(isset($user[0]['login'])) {
             return true;
         }
 
@@ -48,18 +40,10 @@ class User
     }
     
     public static function checkBlock($login) {
-        $db = DataBase::getConnection();
-
-        $sql = 'SELECT COUNT(*) FROM Users WHERE login = :login && block = 1';
-
-        $result = $db->prepare($sql);
-        $result->bindParam(':login', $login, PDO::PARAM_STR);
-        $result->execute();
-
-        if($result->fetchColumn()) {
+        $user = self::getItem("users", array("id", "login", "block"), "login=\"".$login."\"&&block=1");
+        if(isset($user[0]['block'])) {
             return true;
         }
-
         return false;
     }
 
@@ -81,19 +65,9 @@ class User
 
     public static function checkUserData($login, $password)
     {
-        $db = DataBase::getConnection();
-
-        $sql = 'SELECT * FROM users WHERE login = :login AND password = :password';
-
-        $result = $db->prepare($sql);
-        $result->bindParam(':login', $login, PDO::PARAM_INT);
-        $result->bindParam(':password', $password, PDO::PARAM_INT);
-        $result->execute();
-
-        $user = $result->fetch();
-
+        $user = self::getItem("users", array("id", "login", "password"), "login=\"".$login."\" and password=\"".$password."\"");
         if ($user) {
-            return $user['id'];
+            return $user[0]['id'];
         }
         return false;
     }
@@ -126,69 +100,48 @@ class User
         return $password;
     }
 
+    public function cryptAdminKey($password, $pin) {
+        $paramsPath = ROOT . "/config/config.php";
+        $params = include($paramsPath);
+        $pass = $this->cryptPass($password);
+        $key = $params['secret_key'];
+
+        $crypt = md5($pass.$pin.$key);
+        $cert = md5($pin.$key);
+        $result = md5($crypt.$cert);
+
+        return $result;
+    }
+
     public static function auth($userId)
     {
-        $_SESSION['user'] = $userId;
+        $info = self::getUserById($userId);
+        $_SESSION['user_id'] = $userId;
+        $_SESSION['user_login'] = $info[0]['login'];
+        $_SESSION['user_fname'] = $info[0]['first_name'];
+        $_SESSION['user_lname'] = $info[0]['last_name'];
+        $_SESSION['user_image'] = $info[0]['image'];
+        $_SESSION['user_admin'] = $info[0]['is_admin'];
+    }
+
+    public static function logout()
+    {
+        unset($_SESSION['user_id']);
+        unset($_SESSION['user_login']);
+        unset($_SESSION['user_fname']);
+        unset($_SESSION['user_lname']);
+        unset($_SESSION['user_image']);
+        unset($_SESSION['user_admin']);
     }
 
     public static function getUserById($id)
     {
-        $db = DataBase::getConnection();
-
-        $sql = 'SELECT * FROM users WHERE id = :id';
-
-        $result = $db->prepare($sql);
-        $result->bindParam(':id', $id, PDO::PARAM_INT);
-
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        $result->execute();
-
-        return $result->fetch();
-    }
-
-    public static function getUserNameById($id)
-    {
-        $db = DataBase::getConnection();
-
-        $sql = 'SELECT first_name, middle_name, last_name FROM users WHERE id = :id';
-
-        $result = $db->prepare($sql);
-        $result->bindParam(':id', $id, PDO::PARAM_INT);
-
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        $result->execute();
-
-        $name = $result->fetch();
-        return $name["last_name"] . " " . mb_substr($name['first_name'],0,1,'UTF-8') . ". " . mb_substr($name['middle_name'],0,1,'UTF-8').'.';
-    }
-
-    public static function getUserByLogin($login)
-    {
-        $db = DataBase::getConnection();
-
-        $sql = 'SELECT * FROM users WHERE login = :login';
-
-        $result = $db->prepare($sql);
-        $result->bindParam(':login', $login, PDO::PARAM_INT);
-
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        $result->execute();
-
-        return $result->fetch();
-    }
-
-    public static function checkLogged()
-    {
-        if (isset($_SESSION['user'])) {
-            return $_SESSION['user'];
-        }
-
-        header("Location: /auth");
+        return self::getItem("users", array('id','login','password', 'image', 'first_name', 'last_name', 'e_mail', 'is_admin', 'block'), 'id='.$id);
     }
 
     public static function checkLoggedAdmin()
     {
-        if (isset($_SESSION['user'])) {
+        if (isset($_SESSION['user_id'])) {
             $user = self::getUserById($_SESSION['user']);
             if($user['admin'] == 1) {
                 return true;
@@ -204,31 +157,6 @@ class User
             return false;
         }
         return true;
-    }
-
-    public static function getUserList()
-    {
-        // Соединение с БД
-        $db = DataBase::getConnection();
-
-        // Запрос к БД
-        $result = $db->query('SELECT * FROM users WHERE block != 1');
-
-        // Получение и возврат результатов
-        $i = 0;
-        $list = array();
-        while ($row = $result->fetch()) {
-            $list[$i]['id'] = $row['id'];
-            $list[$i]['login'] = $row['login'];
-            $list[$i]['first_name'] = $row['first_name'];
-            $list[$i]['middle_name'] = $row['middle_name'];
-            $list[$i]['last_name'] = $row['last_name'];
-            $list[$i]['photo'] = $row['photo'];
-            $list[$i]['viddil'] = $row['viddil'];
-            $list[$i]['birdth'] = $row['birdth'];
-            $i++;
-        }
-        return $list;
     }
 
 }

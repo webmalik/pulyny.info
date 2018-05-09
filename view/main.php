@@ -25,18 +25,21 @@
         </div>
         <div class="col s12 m6">
             <div class="user">
-                <!--<div class="user_info">
-                    <span>Адамович Дмитро (WebMaLik)</span>
+                <?php if(isset($_SESSION['user_id'])) {?>
+                <div class="user_info">
+                    <span><?=$_SESSION['user_lname']?> <?=$_SESSION['user_fname']?> (<?=$_SESSION['user_login']?>)</span>
                     <a class="waves-effect waves-teal" href="#">Профіль</a>
-                    <a class="waves-effect waves-teal" href="#">Вихід</a>
+                    <a class="waves-effect waves-teal" href="/logout">Вихід</a>
                 </div>
                 <div class="user_img">
-                    <img src="<?/*= HOST */?>/uploads/users/user.png" alt="">
-                </div>-->
+                    <img src="<?= HOST ?><?=$_SESSION['user_image']?>" alt="">
+                </div>
+                <?php }else {?>
                 <div class="user_auth">
                     <a class="waves-effect waves-teal" href="#">Реєстрація</a>
-                    <a class="waves-effect waves-teal" href="#">Вхід</a>
+                    <a class="waves-effect waves-teal" href="/auth">Вхід</a>
                 </div>
+                <?php }?>
             </div>
         </div>
     </div>
@@ -44,7 +47,7 @@
         <div class="col-12 header-nav">
             <nav>
                 <div class="col-sm-12 col-md-10 nav-wrapper center-block">
-                    <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                         <i class="fa fa-bars"></i>
                     </a>
                     <ul class="left hide-on-med-and-down">
@@ -54,15 +57,15 @@
                         <li <?php if($_SERVER['REQUEST_URI'] == "/about"){?> class="active"<?php }?>><a href="/about">Про Пулини</a></li>
                         <li <?php if($_SERVER['REQUEST_URI'] == "/feedback"){?> class="active"<?php }?>><a href="/feedback">Зворотній зв'язок</a></li>
                     </ul>
-                    <ul class="side-nav left" id="mobile-demo" style="transform: translateX(0px);">
-                        <li <?php if($_SERVER['REQUEST_URI'] == "/") {?> class="active"<?php }?>><a href="/">Новини</a></li>
-                        <li <?php if($_SERVER['REQUEST_URI'] == "/chat"){?> class="active"<?php }?>><a href="/chat">Публічний чат</a></li>
-                        <li <?php if($_SERVER['REQUEST_URI'] == "/advertisement"){?> class="active"<?php }?>><a href="/advertisement">Оголошення</a></li>
-                        <li <?php if($_SERVER['REQUEST_URI'] == "/about"){?> class="active"<?php }?>><a href="/about">Про Пулини</a></li>
-                        <li <?php if($_SERVER['REQUEST_URI'] == "/feedback"){?> class="active"<?php }?>><a href="/feedback">Зворотній зв'язок</a></li>
-                    </ul>
                 </div>
             </nav>
+            <ul class="sidenav" id="mobile-demo">
+                <li <?php if($_SERVER['REQUEST_URI'] == "/") {?> class="active"<?php }?>><a href="/">Новини</a></li>
+                <li <?php if($_SERVER['REQUEST_URI'] == "/chat"){?> class="active"<?php }?>><a href="/chat">Публічний чат</a></li>
+                <li <?php if($_SERVER['REQUEST_URI'] == "/advertisement"){?> class="active"<?php }?>><a href="/advertisement">Оголошення</a></li>
+                <li <?php if($_SERVER['REQUEST_URI'] == "/about"){?> class="active"<?php }?>><a href="/about">Про Пулини</a></li>
+                <li <?php if($_SERVER['REQUEST_URI'] == "/feedback"){?> class="active"<?php }?>><a href="/feedback">Зворотній зв'язок</a></li>
+            </ul>
         </div>
     </div>
     <div class="container-fluid">

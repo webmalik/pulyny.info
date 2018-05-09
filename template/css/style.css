@@ -2416,6 +2416,10 @@ nav i.fa-bars {
   padding: 20px;
 }
 
+.pin {
+  display: none;
+}
+
 .page-footer {
   color: #000000;
   background-color: #f7f7f7;

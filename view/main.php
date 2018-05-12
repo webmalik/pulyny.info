@@ -27,8 +27,8 @@
             <div class="user">
                 <?php if(isset($_SESSION['user_id'])) {?>
                 <div class="user_info">
-                    <span <?php if(isset($_SESSION['user_admin'])){ ?> style="color: #00b0ff"><?php } echo $_SESSION['user_lname']?> <?=$_SESSION['user_fname']?> (<?=$_SESSION['user_login']?>)</span>
-                    <a class="waves-effect waves-teal" href="#">Профіль</a>
+                    <span <?php if(isset($_SESSION['user_admin']))echo "style=\"color: #00b0ff\""?> ><?php echo $_SESSION['user_lname']?> <?=$_SESSION['user_fname']?> (<?=$_SESSION['user_login']?>)</span>
+                    <a class="waves-effect waves-teal" href="/profile/<?php if(isset($_SESSION['user_login'])) echo $_SESSION['user_login'];?>">Профіль</a>
                     <a class="waves-effect waves-teal" href="/logout">Вихід</a>
                 </div>
                 <div class="user_img">
@@ -36,7 +36,7 @@
                 </div>
                 <?php }else {?>
                 <div class="user_auth">
-                    <a class="waves-effect waves-teal" href="#">Реєстрація</a>
+                    <a class="waves-effect waves-teal" href="/registration">Реєстрація</a>
                     <a class="waves-effect waves-teal" href="/auth">Вхід</a>
                 </div>
                 <?php }?>

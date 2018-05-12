@@ -45,7 +45,6 @@
             $table = $settings['prefix'].$table;
 
             $db = DataBase::getConnection();
-
             foreach ($params as $key=>$value) {
                 $keys[] = $key;
                 $val[] = $value;

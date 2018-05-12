@@ -25,6 +25,7 @@ return array(
 
     /* Контроллер користувача */
     'profile/([a-z,A-Z,1-9]+)' => 'user/profile/$1',
+    'profile/edit/([a-z,A-Z,1-9]+)' => 'user/profile_edit/$1',
     'registration' => 'user/registration',
     'auth' => 'user/auth',
     'logout' => 'user/logout',

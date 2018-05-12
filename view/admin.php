@@ -1,5 +1,5 @@
 <?php if(!User::checkLoggedAdmin()){
-    header("Location: /notright");
+    header("Location: /notrights");
 }?>
 <!DOCTYPE html>
 <html lang="ua">

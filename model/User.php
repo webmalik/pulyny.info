@@ -3,7 +3,7 @@
 class User extends FrontModel {
 
     public static function checkText($text) {
-        if(strlen($text) > 3) {
+        if(strlen($text) > 2) {
             return true;
         }
         return false;
@@ -48,23 +48,15 @@ class User extends FrontModel {
     }
 
     public static function checkEmailExists($email) {
-        $db = DataBase::getConnection();
-
-        $sql = 'SELECT COUNT(*) FROM users WHERE email = :email';
-
-        $result = $db->prepare($sql);
-        $result->bindParam(':email', $email, PDO::PARAM_STR);
-        $result->execute();
-
-        if($result->fetchColumn()) {
+        $user = self::getItem("users", array("id", "e_mail"), "e_mail=\"".$email."\"");
+        if(isset($user[0]['e_mail'])) {
             return true;
         }
 
         return false;
     }
 
-    public static function checkUserData($login, $password)
-    {
+    public static function checkUserData($login, $password) {
         $user = self::getItem("users", array("id", "login", "password"), "login=\"".$login."\" and password=\"".$password."\"");
         if ($user) {
             return $user[0]['id'];
@@ -72,8 +64,7 @@ class User extends FrontModel {
         return false;
     }
 
-    public static function checkAdminData($login, $password, $pin)
-    {
+    public static function checkAdminData($login, $password, $pin) {
         $key = self::cryptAdminKey($password, $pin);
         $user = self::getItem("users", array("id", "login", "password", "is_admin"), "login=\"".$login."\" and password=\"".$password."\" and is_admin=\"".$key."\"");
         if ($user) {
@@ -82,21 +73,12 @@ class User extends FrontModel {
         return false;
     }
 
-    public static function register($first_name, $middle_name, $last_name, $viddil, $email, $login, $password) {
-        $db = DataBase::getConnection();
+    public static function registration($params) {
+        return self::addItem("users", $params);
+    }
 
-        $sql = 'INSERT INTO `users`( `first_name`, `middle_name`, `last_name`, `viddil`, `email`, `login`, `password`) VALUES (:first_name, :middle_name, :last_name, :viddil, :email, :login, :password)';
-
-        $result = $db->prepare($sql);
-        $result->bindParam(':first_name', $first_name, PDO::PARAM_STR);
-        $result->bindParam(':middle_name', $middle_name, PDO::PARAM_STR);
-        $result->bindParam(':last_name', $last_name, PDO::PARAM_STR);
-        $result->bindParam(':viddil', $viddil, PDO::PARAM_STR);
-        $result->bindParam(':email', $email, PDO::PARAM_STR);
-        $result->bindParam(':login', $login, PDO::PARAM_STR);
-        $result->bindParam(':password', $password, PDO::PARAM_STR);
-
-        return $result->execute();
+    public static function edit($params, $where) {
+        return self::editItem("users", $params, $where);
     }
 
     public static function cryptPass($password) {
@@ -123,47 +105,40 @@ class User extends FrontModel {
         return $result;
     }
 
-    public static function auth($userId)
-    {
+    public static function auth($userId) {
         $info = self::getUserById($userId);
         $_SESSION['user_id'] = $userId;
         $_SESSION['user_login'] = $info[0]['login'];
         $_SESSION['user_fname'] = $info[0]['first_name'];
         $_SESSION['user_lname'] = $info[0]['last_name'];
         $_SESSION['user_image'] = $info[0]['image'];
-
+        $_SESSION['user_email'] = $info[0]['e_mail'];
     }
 
-    public static function logout()
-    {
+    public static function logout() {
         unset($_SESSION['user_id']);
         unset($_SESSION['user_login']);
         unset($_SESSION['user_fname']);
         unset($_SESSION['user_lname']);
         unset($_SESSION['user_image']);
         unset($_SESSION['user_admin']);
+        unset($_SESSION['user_email']);
     }
 
-    public static function getUserById($id)
-    {
+    public static function getUserById($id) {
         return self::getItem("users", array('id','login','password', 'image', 'first_name', 'last_name', 'e_mail', 'is_admin', 'block'), 'id='.$id);
     }
 
-    public static function checkLoggedAdmin()
-    {
+    public static function getUserByLogin($login) {
+        return self::getItem("users", array('id','login', 'image', 'first_name', 'last_name', 'e_mail', 'block'), "login=\"".$login."\"");
+    }
+
+    public static function checkLoggedAdmin() {
         if (isset($_SESSION['user_admin'])) {
             return true;
         }else {
             return false;
         }
-    }
-
-    public static function isGuest()
-    {
-        if (isset($_SESSION['user'])) {
-            return false;
-        }
-        return true;
     }
 
 }

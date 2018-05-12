@@ -39,12 +39,12 @@ class AdminController //extends FrontController
             $meta_keywords = trim($_POST["meta_keywords"]);
 
             if($_FILES['image']['size'] > 0) {
-                $uploaddir = ROOT.'\uploads\articles\\';
+                $uploaddir = ROOT.'\uploads\articles\\'.$name."_";
                 $uploadfile = $uploaddir . basename($_FILES['image']['name']);
                 if(is_uploaded_file($_FILES['image']['tmp_name'])) {
                     move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
                 }
-                $image = trim("\uploads\articles\\".basename($_FILES['image']['name']));
+                $image = trim("\uploads\articles\\".$name."_".basename($_FILES['image']['name']));
             } else {
                 $image = trim($_POST["edit_img"]);
             }
@@ -83,12 +83,12 @@ class AdminController //extends FrontController
             $meta_keywords = trim($_POST["meta_keywords"]);
 
             if($_FILES['image']['size'] > 0) {
-                $uploaddir = ROOT.'\uploads\articles\\';
+                $uploaddir = ROOT.'\uploads\articles\\'.$name."_";
                 $uploadfile = $uploaddir . basename($_FILES['image']['name']);
                 if(is_uploaded_file($_FILES['image']['tmp_name'])) {
                     move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
                 }
-                $image = trim("\uploads\articles\\".basename($_FILES['image']['name']));
+                $image = trim("\uploads\articles\\".$name."_".basename($_FILES['image']['name']));
             } else {
                 $image = trim($_POST["edit_img"]);
             }

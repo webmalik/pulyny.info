@@ -25,9 +25,9 @@
         <form class="login_form" enctype="multipart/form-data" action="" method="post">
             <?php Form::addInputText("login", "Логін")?>
             <?php Form::addInputPass("password", "Пароль")?>
-            <?php Form::addInputPass("first_name", "Ваше ім'я")?>
-            <?php Form::addInputPass("last_name", "Ваше прізвие")?>
-            <?php Form::addInputPass("e_mail", "Ваш E-Mail")?>
+            <?php Form::addInputText("first_name", "Ваше ім'я")?>
+            <?php Form::addInputText("last_name", "Ваше прізвище")?>
+            <?php Form::addInputText("e_mail", "Ваш E-Mail")?>
             <?php if(User::checkLoggedAdmin()) {
                     Form::addCheckBox("Це адміністратор?", "is_admin")?>
                     <div class="pin">
@@ -36,8 +36,19 @@
             <?php }
             }?>
     </div>
-    <div class="card-action">
-        <?php Form::addButtonSubmit("Реєстрація")?>
-        </form>
-    </div>
+        <? if(isset($data['result']) && $data['result']!= NULL) { ?>
+            <div class="card-action">
+                <a href="/auth">Увійти</a>
+            </div>
+            <?php
+        } else {
+            ?>
+            <div class="card-action">
+                <?php Form::addButtonSubmit("Реєстрація")?>
+                </form>
+            </div>
+            <?php
+        }
+        ?>
+
 </div>

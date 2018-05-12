@@ -2433,6 +2433,13 @@ nav i.fa-bars {
   margin-bottom: 0;
 }
 
+.block404 p {
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff4f4f;
+  text-align: center;
+}
 .block404 img {
   display: block;
   max-width: 50%;
@@ -2442,6 +2449,46 @@ nav i.fa-bars {
   display: block;
   margin: 0 auto;
   max-width: 50%;
+}
+
+.notright a {
+  margin: 0 auto;
+  display: block;
+  max-width: 30%;
+}
+.notright p {
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff4f4f;
+  text-align: center;
+}
+
+.profile {
+  min-height: 310px;
+}
+.profile .profile_img {
+  float: left;
+  margin-right: 20px;
+}
+.profile .profile_img img {
+  max-height: 300px;
+}
+.profile .profile_info {
+  min-width: 300px;
+}
+.profile .profile_info .profile_block_info {
+  display: block;
+}
+.profile .profile_info .profile_block_info p {
+  display: block;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.profile .profile_info .profile_block_info span {
+  font-size: 18px;
+  margin: 0 20px;
 }
 
 @media only screen and (max-width: 992px) {

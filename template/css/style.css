@@ -2395,6 +2395,10 @@ nav i.fa-bars {
   position: relative;
 }
 
+.card .card-title {
+  font-size: 18px;
+}
+
 .user {
   text-align: right;
   margin-right: 10px;
@@ -2489,6 +2493,20 @@ nav i.fa-bars {
 .profile .profile_info .profile_block_info span {
   font-size: 18px;
   margin: 0 20px;
+}
+
+.img_core {
+  position: relative;
+  max-height: 300px;
+  overflow: hidden;
+}
+.img_core .img_cut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 @media only screen and (max-width: 992px) {

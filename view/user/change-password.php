@@ -1,11 +1,11 @@
 <div class="card">
     <div class="card-content">
-        <span class="card-title">Реєстрація</span>
+        <span class="card-title">Зміна паролю</span>
         <?php
         if(isset($data['errors']) && is_array($data['errors'])) {
             ?>
             <div class="bs-callout bs-callout-danger">
-                <h4>Помилка при реєстрації</h4>
+                <h4>Помилка при зміні паролю</h4>
                 <?php
                 foreach ($data['errors'] as $error) {
                     echo "<p> - ".$error."</p>";
@@ -17,35 +17,31 @@
         if(isset($data['result']) && $data['result'] != NULL) {
             ?>
             <div class="bs-callout bs-callout-danger">
-                <h4>Ви успішно зареєструвались!</h4>
+                <h4>Ви успішно змінили пароль!</h4>
             </div>
             <?php
         } else {
         ?>
         <form class="login_form" enctype="multipart/form-data" action="" method="post">
-            <?php Form::addInputText("login", "Логін")?>
             <?php Form::addInputPass("password", "Пароль")?>
             <?php Form::addInputPass("password_d", "Повторіть пароль")?>
-            <?php Form::addInputText("first_name", "Ваше ім'я")?>
-            <?php Form::addInputText("last_name", "Ваше прізвище")?>
-            <?php Form::addInputText("e_mail", "Ваш E-Mail")?>
             <?php if(User::checkLoggedAdmin()) {
-                    Form::addCheckBox("Це адміністратор?", "is_admin")?>
-                    <div class="pin">
-                        <?php Form::addInputPass("pin", "Pin-код")?>
-                    </div>
+                Form::addCheckBox("Задайте новий pin-код", "is_admin")?>
+                <div class="pin">
+                    <?php Form::addInputPass("pin", "Pin-код")?>
+                </div>
             <?php }
             }?>
     </div>
         <? if(isset($data['result']) && $data['result']!= NULL) { ?>
             <div class="card-action">
-                <a href="/auth">Увійти</a>
+                <a href="/profile/<?=$_SESSION['user_login']?>">Повернутись</a>
             </div>
             <?php
         } else {
             ?>
             <div class="card-action">
-                <?php Form::addButtonSubmit("Реєстрація")?>
+                <?php Form::addButtonSubmit("Змінити пароль")?>
                 </form>
             </div>
             <?php

@@ -81,6 +81,10 @@ class User extends FrontModel {
         return self::editItem("users", $params, $where);
     }
 
+    public static function change_password($params, $where) {
+        return self::editItem("users", $params, $where);
+    }
+
     public static function cryptPass($password) {
         $paramsPath = ROOT . "/config/config.php";
         $params = include($paramsPath);

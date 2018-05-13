@@ -22,14 +22,17 @@
             </div>
         </div>
     </div>
+    <?php if(isset($_SESSION['user_login'])) {?>
     <div class="chat-area">
         <textarea name="text" id="" class="froala" cols="30" rows="100"></textarea>
     </div>
     <div class="chat-enter">
         <a href="#" class="btn waves-effect waves-light">Надіслати</a>
     </div>
-    <!--<div class="chat-access">
+    <?php } else {?>
+    <div class="chat-access">
         <p>Ви не авторизовані. Для користування чатом, будь-ласка, авторизуйтесь...</p>
         <a href="/auth" class="btn waves-effect waves-light">Авторизація</a>
-    </div>-->
+    </div>
+    <?php }?>
 </div>

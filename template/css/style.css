@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**** Imports *** */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -2529,6 +2530,43 @@ nav i.fa-bars {
   right: 0;
   bottom: 0;
   margin: auto;
+}
+
+/***** ╨Я╤Г╨▒╨╗╤Ц╤З╨╜╨╕╨╣ ╤З╨░╤В  ***** */
+.chat .chat-window {
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.chat .chat-window .chat-message {
+  padding: 20px;
+}
+.chat .chat-window .chat-message .chat-message-img img {
+  width: 100%;
+}
+.chat .chat-area {
+  padding: 0 30px 20px;
+}
+.chat .chat-access {
+  background-color: rgba(255, 79, 79, 0.81);
+  padding-bottom: 20px;
+}
+.chat .chat-access p {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.chat .chat-access a {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+.chat .chat-enter a {
+  display: block;
+  width: 200px;
+  margin: 10px auto 20px;
 }
 
 @media only screen and (max-width: 992px) {

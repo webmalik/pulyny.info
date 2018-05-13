@@ -11,6 +11,10 @@
     <link href="<?=HOST?>/template/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?=HOST?>/template/css/materialize.min.css" rel="stylesheet">
     <link href="<?=HOST?>/template/css/style.css" rel="stylesheet">
+
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="container-fluid">
@@ -132,6 +136,7 @@
 <!-- Materialize JS -->
 <script type="text/javascript" src="<?=HOST?>/template/js/materialize.min.js"></script>
 <script type="text/javascript" src="<?=HOST?>/template/js/main.js"></script>
-
+<!-- Include Editor JS files. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
 </body>
 </html>

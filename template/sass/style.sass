@@ -183,5 +183,39 @@ nav
     bottom: 0
     margin: auto
 
+/***** Публічний чат  ******/
+.chat
+  .chat-window
+    height: 500px
+    overflow-y: scroll
+    overflow-x: hidden
+
+    .chat-message
+      padding: 20px
+      .chat-message-img
+        img
+          width: 100%
+      .chat-message-text
+  .chat-area
+    padding: 0 30px 20px
+
+  .chat-access
+    background-color: rgba(255, 79, 79, 0.81)
+    padding-bottom: 20px
+    p
+      padding: 20px
+      font-size: 20px
+      text-align: center
+      font-weight: bold
+      color: #fff
+    a
+      display: block
+      width: 200px
+      margin: 0 auto
+
+  .chat-enter a
+    display: block
+    width: 200px
+    margin: 10px auto 20px
 
 @import "_mobile.sass"

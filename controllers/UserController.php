@@ -54,6 +54,7 @@ class UserController
         if(isset($_POST['submit'])) {
             $login = trim($_POST["login"]);
             $password = trim($_POST["password"]);
+            $password_d = trim($_POST["password_d"]);
             if(isset($_POST['is_admin'])) {
                 $pin = trim($_POST['pin']);
             }
@@ -66,6 +67,8 @@ class UserController
                 $errors[] = "Даний Логін уже зареєстрований";
             } else if(!$user->checkPassword($password)) {
                 $errors[] = "Пароль не може бути менше 6 символів";
+            } else if($password != $password_d) {
+                $errors[] = "Паролі не співпадають";
             } else {
                 $password = $user->cryptPass($password);
                 if(isset($_POST['is_admin'])) {
@@ -124,40 +127,80 @@ class UserController
         $errors = '';
         $result = "";
         $user_info = $user->getUserByLogin($login);
-        if(isset($_POST['submit'])) {
-            $first_name = trim($_POST["first_name"]);
-            $last_name = trim($_POST["last_name"]);
-            $e_mail = trim($_POST["e_mail"]);
-            if (!$user->checkEmail($e_mail)) {
-                $errors[] = "Невірно введений E-Mail";
-            }else if($e_mail != $user_info[0]['e_mail'] && $user->checkEmailExists($e_mail)) {
-                $errors[] = "Даний E-Mail уже зареєстрований";
-            }else if (!$user->checkText($first_name)) {
-                $errors[] = "Коротке ім'я";
-            }else if (!$user->checkText($last_name)) {
-                $errors[] = "Коротке прізвище";
-            }
-            if($_FILES['image']['size'] > 0) {
-                $uploaddir = ROOT.'\uploads\users\\'.$login."_";
-                $uploadfile = $uploaddir . basename($_FILES['image']['name']);
-                if(is_uploaded_file($_FILES['image']['tmp_name'])) {
-                    move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
+        if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == $login) {
+            if (isset($_POST['submit'])) {
+                $first_name = trim($_POST["first_name"]);
+                $last_name = trim($_POST["last_name"]);
+                $e_mail = trim($_POST["e_mail"]);
+                if (!$user->checkEmail($e_mail)) {
+                    $errors[] = "Невірно введений E-Mail";
+                } else if ($e_mail != $user_info[0]['e_mail'] && $user->checkEmailExists($e_mail)) {
+                    $errors[] = "Даний E-Mail уже зареєстрований";
+                } else if (!$user->checkText($first_name)) {
+                    $errors[] = "Коротке ім'я";
+                } else if (!$user->checkText($last_name)) {
+                    $errors[] = "Коротке прізвище";
                 }
-                $image = trim("\uploads\users\\".$login."_".basename($_FILES['image']['name']));
-            } else {
-                $image = trim($_POST["edit_img"]);
+                if ($_FILES['image']['size'] > 0) {
+                    $uploaddir = ROOT . '\uploads\users\\' . $login . "_";
+                    $uploadfile = $uploaddir . basename($_FILES['image']['name']);
+                    if (is_uploaded_file($_FILES['image']['tmp_name'])) {
+                        move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
+                    }
+                    $image = trim("\uploads\users\\" . $login . "_" . basename($_FILES['image']['name']));
+                } else {
+                    $image = trim($_POST["edit_img"]);
+                }
+                if ($errors == false) {
+                    $result = $user->edit(array("image" => $image, "first_name" => $first_name, "last_name" => $last_name, "e_mail" => $e_mail), "login=\"" . $login . "\"");
+                    $_SESSION['user_image'] = $image;
+                    $_SESSION['user_fname'] = $first_name;
+                    $_SESSION['user_lname'] = $last_name;
+                    $_SESSION['user_email'] = $e_mail;
+                }
             }
-            if($errors == false) {
-                $result = $user->edit(array("image"=>$image, "first_name"=>$first_name, "last_name"=>$last_name, "e_mail"=>$e_mail),"login=\"".$login."\"");
-                $_SESSION['user_image'] = $image;
-                $_SESSION['user_fname'] = $first_name;
-                $_SESSION['user_lname'] = $last_name;
-                $_SESSION['user_email'] = $e_mail;
-            }
+        }else {
+            header("Location: /404 ");
         }
-        $data = array("result"=>$result, "errors"=>$errors, "user"=>$user_info[0]);
+        $data = array("result" => $result, "errors" => $errors, "user" => $user_info[0]);
         $template = new Template();
-        $template->render('user/edit', array("data"=>$data));
+        $template->render('user/edit', array("data" => $data));
+        return true;
+    }
+
+    public function actionProfile_change_password($login) {
+        $user = new User();
+        $errors = '';
+        $result = "";
+        $pin = "";
+        $user_info = $user->getUserByLogin($login);
+        if(isset($_SESSION['user_login']) && $_SESSION['user_login'] == $login) {
+            if (isset($_POST['submit'])) {
+                $password = trim($_POST["password"]);
+                $password_d = trim($_POST["password_d"]);
+                if (isset($_POST['is_admin'])) {
+                    $pin = trim($_POST['pin']);
+                }
+                if (!$user->checkPassword($password)) {
+                    $errors[] = "Пароль не може бути менше 6 символів";
+                } else if ($password != $password_d) {
+                    $errors[] = "Паролі не співпадають";
+                } else {
+                    $password = $user->cryptPass($password);
+                    if (isset($_POST['is_admin'])) {
+                        $pin = $user->cryptAdminKey($password, $pin);
+                    }
+                }
+                if ($errors == false) {
+                    $result = $user->change_password(array("password" => $password, "is_admin" => $pin), "login=\"" . $login . "\"");
+                }
+            }
+        }else {
+            header("Location: /404 ");
+        }
+        $data = array("result" => $result, "errors" => $errors, "user" => $user_info[0]);
+        $template = new Template();
+        $template->render('user/change-password', array("data" => $data));
         return true;
     }
 }

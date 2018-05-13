@@ -31,17 +31,33 @@
             </a>
         </div>
         <div class="col s12 m6">
-
+            <div class="user">
+                <?php if(isset($_SESSION['user_id'])) {?>
+                    <div class="user_info">
+                        <span <?php if(isset($_SESSION['user_admin']))echo "style=\"color: #00b0ff\""?> ><?php echo $_SESSION['user_lname']?> <?=$_SESSION['user_fname']?> (<?=$_SESSION['user_login']?>)</span>
+                        <a class="waves-effect waves-teal" target="_blank" href="/">Відкрити сайт</a>
+                        <a class="waves-effect waves-teal" href="/logout">Вихід</a>
+                    </div>
+                    <div class="user_img">
+                        <img src="<?= HOST ?><?=$_SESSION['user_image']?>" alt="">
+                    </div>
+                <?php }else {?>
+                    <div class="user_auth">
+                        <a class="waves-effect waves-teal" href="/registration">Реєстрація</a>
+                        <a class="waves-effect waves-teal" href="/auth">Вхід</a>
+                    </div>
+                <?php }?>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col s12 m2">
             <ul class="admin-nav">
                 <li><a href="/admin/news">Новини</a></li>
-                <li><a href="#">Повідомлення</a></li>
-                <li><a href="#">Повідомлення</a></li>
-                <li><a href="#">Повідомлення</a></li>
-                <li><a href="#">Повідомлення</a></li>
+                <li><a href="/admin/users">Користувачі</a></li>
+                <li><a href="#">Публічний чат</a></li>
+                <li><a href="#">Оголошення</a></li>
+                <li><a href="#">Про пулини</a></li>
             </ul>
         </div>
         <div class="col s12 m10 admin-container">

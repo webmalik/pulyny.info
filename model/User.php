@@ -85,6 +85,18 @@ class User extends FrontModel {
         return self::editItem("users", $params, $where);
     }
 
+    public static function getUsersList() {
+        return self::getItem("users", array('id','login', 'image', 'first_name', 'last_name', 'block'));
+    }
+
+    public static function block($login) {
+        return self::editItem("users", array('login'=>$login,'block'=>"1"), "login=\"".$login."\"");
+    }
+
+    public static function unblock($login) {
+        return self::editItem("users", array('login'=>$login,'block'=>"0"), "login=\"".$login."\"");
+    }
+
     public static function cryptPass($password) {
         $paramsPath = ROOT . "/config/config.php";
         $params = include($paramsPath);

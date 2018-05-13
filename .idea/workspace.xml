@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="867bc0e7-5902-4edc-a523-b79d4d6639e8" name="Default" comment="">
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> user-in-admin
     </list>
     <list id="fe290a88-8697-4f29-a55d-05212a31839a" name="Add change passwrd module" comment="Add change passwrd module" />
     <list id="a8eb1b0f-2c3a-4935-903a-f38688a09893" name="Add $data = array(result =&gt; $result, errors =&gt; $errors, user =&gt; $user_info[0]); (cherry picked from commit cda0c8a)" comment="Add $data = array(result =&gt; $result, errors =&gt; $errors, user =&gt; $user_info[0]);&#10;&#10;(cherry picked from commit cda0c8a)" />
@@ -20,7 +24,11 @@
         <entry file="file://$PROJECT_DIR$/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="663">
+<<<<<<< HEAD
               <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+=======
+              <caret line="42" column="2" lean-forward="false" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+>>>>>>> user-in-admin
               <folding />
             </state>
           </provider>
@@ -42,6 +50,7 @@
             <state relative-caret-position="17">
               <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="35" />
               <folding>
+<<<<<<< HEAD
                 <marker date="1526226395677" expanded="true" signature="1699:1725" ph="..." />
                 <marker date="1526226395677" expanded="true" signature="1699:1740" ph="..." />
                 <marker date="1526226395677" expanded="true" signature="1699:1842" ph="..." />
@@ -56,6 +65,22 @@
                 <marker date="1526226395677" expanded="true" signature="2481:2485" ph="..." />
                 <marker date="1526226395677" expanded="true" signature="2569:2573" ph="..." />
                 <marker date="1526226395677" expanded="true" signature="2646:2650" ph="..." />
+=======
+                <marker date="1526225874967" expanded="true" signature="2737:2763" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="2737:2778" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="2737:2880" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="2828:2869" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="2845:2853" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="2914:3302" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="2943:3288" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="2983:3273" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="3035:3122" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="3068:3083" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="3175:3254" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="3519:3523" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="3607:3611" ph="..." />
+                <marker date="1526225874967" expanded="true" signature="3684:3688" ph="..." />
+>>>>>>> user-in-admin
               </folding>
             </state>
           </provider>
@@ -65,6 +90,7 @@
         <entry file="file://$PROJECT_DIR$/model/User.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="478">
+<<<<<<< HEAD
               <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
               <folding>
                 <marker date="1526226395640" expanded="true" signature="38:4413" ph="..." />
@@ -78,6 +104,21 @@
                 <marker date="1526226395640" expanded="true" signature="4282:4410" ph="..." />
                 <marker date="1526226395640" expanded="true" signature="4328:4362" ph="..." />
                 <marker date="1526226395640" expanded="true" signature="4369:4404" ph="..." />
+=======
+              <caret line="99" column="49" lean-forward="false" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
+              <folding>
+                <marker date="1526225874835" expanded="true" signature="38:4873" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="2951:3187" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="3080:3154" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="3249:3561" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="3606:3970" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="4010:4292" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="4340:4494" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="4548:4692" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="4742:4870" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="4788:4822" ph="..." />
+                <marker date="1526225874835" expanded="true" signature="4829:4864" ph="..." />
+>>>>>>> user-in-admin
               </folding>
             </state>
           </provider>
@@ -107,7 +148,11 @@
         <entry file="file://$PROJECT_DIR$/controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1243">
+<<<<<<< HEAD
               <caret line="121" column="1" lean-forward="false" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+=======
+              <caret line="149" column="1" lean-forward="false" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+>>>>>>> user-in-admin
               <folding />
             </state>
           </provider>
@@ -126,6 +171,7 @@
       <file leaf-file-name="admin.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/sass/admin.sass">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="883">
               <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
@@ -134,6 +180,15 @@
                 <marker date="1526226395664" expanded="true" signature="1306:1307" ph="..." />
                 <marker date="1526226395664" expanded="true" signature="1344:1406" ph="..." />
                 <marker date="1526226395664" expanded="true" signature="1366:1405" ph="..." />
+=======
+            <state relative-caret-position="1240">
+              <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+              <folding>
+                <marker date="1526225874931" expanded="true" signature="132:248" ph="..." />
+                <marker date="1526225874931" expanded="true" signature="191:248" ph="..." />
+                <marker date="1526225874931" expanded="true" signature="1684:1746" ph="..." />
+                <marker date="1526225874931" expanded="true" signature="1706:1745" ph="..." />
+>>>>>>> user-in-admin
               </folding>
             </state>
           </provider>
@@ -145,7 +200,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="user-in-admin" />
+=======
+        <entry key="$PROJECT_DIR$" value="master" />
+>>>>>>> user-in-admin
       </map>
     </option>
   </component>
@@ -698,7 +757,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="186702000" />
+=======
+    <option name="totallyTimeSpent" value="186047000" />
+>>>>>>> user-in-admin
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -720,7 +783,11 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66121113" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7119476" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7119476" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> user-in-admin
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -863,6 +930,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/sass/admin.sass">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="883">
           <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
@@ -871,6 +939,15 @@
             <marker date="1526226395664" expanded="true" signature="1306:1307" ph="..." />
             <marker date="1526226395664" expanded="true" signature="1344:1406" ph="..." />
             <marker date="1526226395664" expanded="true" signature="1366:1405" ph="..." />
+=======
+        <state relative-caret-position="1240">
+          <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+          <folding>
+            <marker date="1526225874931" expanded="true" signature="132:248" ph="..." />
+            <marker date="1526225874931" expanded="true" signature="191:248" ph="..." />
+            <marker date="1526225874931" expanded="true" signature="1684:1746" ph="..." />
+            <marker date="1526225874931" expanded="true" signature="1706:1745" ph="..." />
+>>>>>>> user-in-admin
           </folding>
         </state>
       </provider>
@@ -1021,6 +1098,7 @@
         <state relative-caret-position="17">
           <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="35" />
           <folding>
+<<<<<<< HEAD
             <marker date="1526226395677" expanded="true" signature="1699:1725" ph="..." />
             <marker date="1526226395677" expanded="true" signature="1699:1740" ph="..." />
             <marker date="1526226395677" expanded="true" signature="1699:1842" ph="..." />
@@ -1035,6 +1113,22 @@
             <marker date="1526226395677" expanded="true" signature="2481:2485" ph="..." />
             <marker date="1526226395677" expanded="true" signature="2569:2573" ph="..." />
             <marker date="1526226395677" expanded="true" signature="2646:2650" ph="..." />
+=======
+            <marker date="1526225874967" expanded="true" signature="2737:2763" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="2737:2778" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="2737:2880" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="2828:2869" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="2845:2853" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="2914:3302" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="2943:3288" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="2983:3273" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="3035:3122" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="3068:3083" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="3175:3254" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="3519:3523" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="3607:3611" ph="..." />
+            <marker date="1526225874967" expanded="true" signature="3684:3688" ph="..." />
+>>>>>>> user-in-admin
           </folding>
         </state>
       </provider>
@@ -1131,7 +1225,11 @@
     <entry file="file://$PROJECT_DIR$/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
+<<<<<<< HEAD
           <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+=======
+          <caret line="42" column="2" lean-forward="false" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+>>>>>>> user-in-admin
           <folding />
         </state>
       </provider>
@@ -1155,7 +1253,11 @@
     <entry file="file://$PROJECT_DIR$/controllers/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1243">
+<<<<<<< HEAD
           <caret line="121" column="1" lean-forward="false" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+=======
+          <caret line="149" column="1" lean-forward="false" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+>>>>>>> user-in-admin
           <folding />
         </state>
       </provider>
@@ -1187,6 +1289,7 @@
     <entry file="file://$PROJECT_DIR$/model/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
+<<<<<<< HEAD
           <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
           <folding>
             <marker date="1526226395640" expanded="true" signature="38:4413" ph="..." />
@@ -1200,6 +1303,21 @@
             <marker date="1526226395640" expanded="true" signature="4282:4410" ph="..." />
             <marker date="1526226395640" expanded="true" signature="4328:4362" ph="..." />
             <marker date="1526226395640" expanded="true" signature="4369:4404" ph="..." />
+=======
+          <caret line="99" column="49" lean-forward="false" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
+          <folding>
+            <marker date="1526225874835" expanded="true" signature="38:4873" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="2951:3187" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="3080:3154" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="3249:3561" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="3606:3970" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="4010:4292" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="4340:4494" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="4548:4692" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="4742:4870" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="4788:4822" ph="..." />
+            <marker date="1526225874835" expanded="true" signature="4829:4864" ph="..." />
+>>>>>>> user-in-admin
           </folding>
         </state>
       </provider>

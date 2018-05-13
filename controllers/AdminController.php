@@ -119,4 +119,32 @@ class AdminController //extends FrontController
         $template->adminrender('admin/news/delete', array("result"=>$delete_news));
         return true;
     }
+
+    public function actionUsers() {
+        $data ="";
+        $user = new User();
+        $user_info = $user->getUsersList();
+        $template = new Template();
+        $data = array("users_info"=>$user_info);
+        $template->adminrender('admin/users/index', array("data"=>$data));
+        return true;
+    }
+
+    public function actionUsers_unblock($login) {
+        $user = new User();
+        $user->unblock($login);
+        //$user_info = $user->getUsersList();
+        $template = new Template();
+        header("Location: /admin/users/");
+        return true;
+    }
+
+    public function actionUsers_block($login) {
+        $user = new User();
+        $user->block($login);
+        //$user_info = $user->getUsersList();
+        $template = new Template();
+        header("Location: /admin/users/");
+        return true;
+    }
 }

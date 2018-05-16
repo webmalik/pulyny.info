@@ -13,6 +13,8 @@ return array(
 
     /* Контролер чату  */
     'chat' => 'chat/index',
+    'chat/add/([a-z,A-Z,1-9,-]+)' => 'chat/add/$1',
+    'chat/refresh' => 'chat/refresh',
 
     /* Контролер оголошень */
     'advertisement' => 'advertisement/index',

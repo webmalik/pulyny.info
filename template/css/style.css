@@ -2544,6 +2544,9 @@ nav i.fa-bars {
 .chat .chat-window .chat-message .chat-message-img img {
   width: 100%;
 }
+.chat .chat-window .chat-message .chat-message-text {
+  min-height: 40px;
+}
 .chat .chat-area {
   padding: 0 30px 20px;
 }

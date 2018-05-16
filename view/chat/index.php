@@ -3,31 +3,25 @@
         Публічний чат
     </div>
     <div class="main-panel-content chat-window">
-        <div class="chat-message">
-            <div class="chat-message-img col s1">
-                <img src="<?=HOST?><?=$_SESSION['user_image']?>" alt="">
+        <?php foreach ($messages as $message) {?>
+        <?php $user = User::getUsersByChat($message['user_id'])?>
+            <div class="chat-message">
+                <div class="chat-message-img col s1">
+                    <img src="<?=HOST?><?=$user[0]['image']?>" alt="">
+                </div>
+                <div class="chat-message-text s11">
+                    <p><?=$user[0]['login']?></p>
+                    <span><?=$message['message']?></span>
+                </div>
             </div>
-            <div class="chat-message-text s11">
-                <p><?=$_SESSION['user_login']?></p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusantium autem blanditiis culpa dicta, doloremque dolores ducimus eius exercitationem itaque laudantium non nostrum omnis qui, quia quisquam repudiandae voluptatem.</span>
-            </div>
-        </div>
-        <div class="chat-message">
-            <div class="chat-message-img col s1">
-                <img src="<?=HOST?><?=$_SESSION['user_image']?>" alt="">
-            </div>
-            <div class="chat-message-text s11">
-                <p><?=$_SESSION['user_login']?></p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusantium autem blanditiis culpa dicta, doloremque dolores ducimus eius exercitationem itaque laudantium non nostrum omnis qui, quia quisquam repudiandae voluptatem.</span>
-            </div>
-        </div>
+        <?php } ?>
     </div>
     <?php if(isset($_SESSION['user_login'])) {?>
     <div class="chat-area">
-        <textarea name="text" id="" class="froala" cols="30" rows="100"></textarea>
+        <textarea name="message" id="message" class="froala" cols="30" rows="100"></textarea>
     </div>
     <div class="chat-enter">
-        <a href="#" class="btn waves-effect waves-light">Надіслати</a>
+        <a href="#" id="send_chat" data-user="<?=$_SESSION['user_id']?>" class="btn waves-effect waves-light">Надіслати</a>
     </div>
     <?php } else {?>
     <div class="chat-access">

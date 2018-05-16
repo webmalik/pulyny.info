@@ -2544,8 +2544,23 @@ nav i.fa-bars {
 .chat .chat-window .chat-message .chat-message-img img {
   width: 100%;
 }
+.chat .chat-window .chat-message .chat-message-text {
+  min-height: 40px;
+}
 .chat .chat-area {
   padding: 0 30px 20px;
+}
+.chat #insertImage-1 {
+  display: none;
+}
+.chat #insertVideo-1 {
+  display: none;
+}
+.chat #insertFile-1 {
+  display: none;
+}
+.chat .fr-hs {
+  display: none;
 }
 .chat .chat-access {
   background-color: rgba(255, 79, 79, 0.81);

@@ -89,6 +89,10 @@ class User extends FrontModel {
         return self::getItem("users", array('id','login', 'image', 'first_name', 'last_name', 'block'));
     }
 
+    public static function getUsersByChat($id) {
+        return self::getItem("users", array('id','login', 'image', 'first_name', 'last_name'), "id=".$id);
+    }
+
     public static function block($login) {
         return self::editItem("users", array('login'=>$login,'block'=>"1"), "login=\"".$login."\"");
     }

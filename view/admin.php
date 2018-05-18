@@ -55,8 +55,8 @@
             <ul class="admin-nav">
                 <li><a href="/admin/news">Новини</a></li>
                 <li><a href="/admin/users">Користувачі</a></li>
-                <li><a href="#">Публічний чат</a></li>
-                <li><a href="#">Оголошення</a></li>
+                <li><a href="">Публічний чат</a></li>
+                <li><a href="/admin/advertisement">Оголошення</a></li>
                 <li><a href="#">Про пулини</a></li>
             </ul>
         </div>

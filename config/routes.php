@@ -18,6 +18,7 @@ return array(
 
     /* Контролер оголошень */
     'advertisement' => 'advertisement/index',
+    'advertisement/([a-z,A-Z,1-9,-]+)'=>'advertisement/view/$1',
 
     /* Контролер "Про Пулини" */
     'about' => 'about/index',
@@ -39,6 +40,10 @@ return array(
     'admin/news/add'=>'admin/addnews/',
     'admin/news/edit/([a-z,A-Z,1-9,-]+)'=>'admin/editnews/$1',
     'admin/news/delete/([a-z,A-Z,1-9,-]+)'=>'admin/deletenews/$1',
+    'admin/advertisement' => 'admin/advertisement',
+    'admin/advertisement/add'=>'admin/addadvertisement/',
+    'admin/advertisement/edit/([a-z,A-Z,1-9,-]+)'=>'admin/editadvertisement/$1',
+    'admin/advertisement/delete/([a-z,A-Z,1-9,-]+)'=>'admin/deleteadvertisement/$1',
     'admin/users'=>'admin/users',
     'admin/users/block/([a-z,A-Z,1-9,-]+)'=>'admin/users_block/$1',
     'admin/users/unblock/([a-z,A-Z,1-9,-]+)'=>'admin/users_unblock/$1',

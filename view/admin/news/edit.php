@@ -2,12 +2,12 @@
     <div class="col s12">
         <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-                <span class="card-title">Додавання нової статьї</span>
+                <span class="card-title">Редагування статьї</span>
                 <?php
                 if(isset($errors) && is_array($errors)) {
                     ?>
                     <div class="bs-callout bs-callout-danger">
-                        <h4>Помилка при додаванні</h4>
+                        <h4>Помилка при редагуванні</h4>
                         <?php
                         foreach ($errors as $error) {
                             echo "<p> - ".$error."</p>";

@@ -1,7 +1,7 @@
 scrollBottom();
 setInterval(function () {
     refresh();
-},5000);
+},1000);
 
 $("#send_chat").click(function (e) {
     e.preventDefault();

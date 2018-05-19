@@ -99,7 +99,7 @@
                             <p style="font-weight: bold;"><?=$adver['title']?></p>
                             <br>
                             <p><?=$adver['description']?></p>
-                            <a href="#">Читати</a>
+                            <a href="/advertisement/<?=$adver['slug']?>">Читати</a>
                             <hr>
                         </div>
                     <?php }?>

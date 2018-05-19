@@ -18,10 +18,10 @@
                 $sel = $sel." ".$order;
             }
             if (isset($limit) && $limit != NULL) {
-                $sel = $sel." ".$sel.$limit;
+                $sel = $sel." ".$limit;
             }
             if(isset($offset) && $offset != NULL) {
-                $sel = $sel." ".$sel.$offset;
+                $sel = $sel." ".$offset;
             }
             //echo $sel;
             // Запрос к БД
@@ -30,7 +30,7 @@
             // Получение и возврат результатов
             $i = 0;
             $result = array();
-            while ($row = $query->fetch()) {
+            while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
                 for($p=0; $p < count($params); $p++) {
                     $result[$i][$params[$p]] = $row[$params[$p]];
                 }

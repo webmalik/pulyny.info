@@ -6,6 +6,11 @@ class Advertisement extends FrontModel {
          return self::getItem("advertisement", array("id", "description", "title", "image", "slug"),"","ORDER BY id DESC");
     }
 
+    public static function getAllDescAdvertisementLimit() {
+        $limit = 5;
+         return self::getItem("advertisement", array("id", "description", "title", "slug"),"","ORDER BY `id` DESC", " LIMIT ".$limit);
+    }
+
     public static function getAdvertisement($slug) {
          return self::getItem("advertisement", array("id",  "text", "image", "title", "description", "slug"), "slug=\"".$slug."\"");
     }

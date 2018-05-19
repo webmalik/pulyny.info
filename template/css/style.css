@@ -2588,6 +2588,11 @@ nav i.fa-bars {
   margin: 10px auto 20px;
 }
 
+.ad-button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 992px) {
   .logo {
     text-align: center;

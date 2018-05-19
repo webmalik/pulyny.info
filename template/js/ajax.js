@@ -1,9 +1,8 @@
+var s = 0;
 scrollBottom();
-setInterval(function () {
-    refresh();
-},1000);
 
 $("#send_chat").click(function (e) {
+    s = 0;
     e.preventDefault();
     var message = $('#message').val();
     message.trim();
@@ -11,8 +10,11 @@ $("#send_chat").click(function (e) {
         var id = $(this).attr("data-user");
         console.log(id);
         $.post("/chat/add/"+id, {message:message}, function (data) {
-            setInterval(refresh(), 2000);
-            $('#message').val("");
+            setInterval(function () {
+                refresh();
+            },1000);
+            $('#message').val(" ");
+            $('div.fr-view').empty();
         });
         return false;
     }else {
@@ -24,7 +26,10 @@ $("#send_chat").click(function (e) {
 function refresh() {
     $.post("/chat/refresh", {}, function (data) {
         $(".chat-window").html(data);
-        scrollBottom();
+        if(s == 0) {
+            s = 1;
+            scrollBottom();
+        }
     });
     return false;
 }

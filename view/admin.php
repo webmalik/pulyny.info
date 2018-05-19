@@ -21,7 +21,7 @@
 </head>
 <body>
 <div class="container-fluid admin-panel">
-    <div class="row z-depth-2">
+    <div class="z-depth-2 admin-header row">
         <div class="progress">
             <div class="indeterminate"></div>
         </div>
@@ -55,7 +55,6 @@
             <ul class="admin-nav">
                 <li><a href="/admin/news">Новини</a></li>
                 <li><a href="/admin/users">Користувачі</a></li>
-                <li><a href="">Публічний чат</a></li>
                 <li><a href="/admin/advertisement">Оголошення</a></li>
                 <li><a href="#">Про пулини</a></li>
             </ul>

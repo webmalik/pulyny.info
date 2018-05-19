@@ -2232,11 +2232,15 @@ a[href="https://www.froala.com/wysiwyg-editor?k=u"] {
 }
 .admin-panel .row {
   background: #343a40;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   padding-bottom: 10px;
 }
 .admin-panel .fa-plus {
   color: #fff;
+}
+
+.admin-header {
+  margin-bottom: 30px !important;
 }
 
 .admin-nav {

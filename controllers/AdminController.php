@@ -236,22 +236,22 @@ class AdminController //extends FrontController
         $template->adminrender('admin/advertisement/edit', array("advertisement"=>$advert, "result"=>$edit_advertisement));
         return true;
     }
-/*
-    public function actionDeletenews($slug) {
-        $delete_news = "";
-        $article = new Articles();
-        $news = $article->getArticle($slug);
+
+    public function actionDeleteadvertisement($slug) {
+        $delete_advertisement = "";
+        $advertisement = new Advertisement();
+        $advert=$advertisement->getAdvertisement($slug);
 
         $errors = '';
 
         if(isset($_POST["submit"])) {
 
             if($errors == false) {
-                $delete_news = $article->deleteArticle($news[0]["id"]);
+                $delete_advertisement = $advertisement->deleteAdvertisement($advert[0]["id"]);
             }
         }
         $template = new Template();
-        $template->adminrender('admin/news/delete', array("result"=>$delete_news));
+        $template->adminrender('admin/advertisement/delete', array("result"=>$delete_advertisement));
         return true;
-    }*/
+    }
 }

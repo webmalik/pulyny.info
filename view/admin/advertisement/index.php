@@ -1,6 +1,3 @@
-<div class="article_add">
-    <a href="/admin/news/add" class="btn-floating btn-large waves-effect waves-light red"><i class="fa fa-plus"></i></a>
-</div>
 <? foreach ($advertisements as $advertisement) {?>
     <div class="row">
         <div class="card blue-grey darken-1">

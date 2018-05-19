@@ -11,7 +11,7 @@ class Advertisement extends FrontModel {
     }
 
     public static function addAdvertisement($params) {
-        return self::addItem("articles", $params);
+        return self::addItem("advertisement", $params);
     }
 
     public static function editAdvertisement($params, $where) {
@@ -19,6 +19,6 @@ class Advertisement extends FrontModel {
     }
 
     public static function deleteAdvertisement($slug) {
-        return self::deleteItem("articles", $slug);
+        return self::deleteItem("advertisement", $slug);
     }
 }

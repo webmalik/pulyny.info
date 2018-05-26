@@ -2547,9 +2547,11 @@ nav i.fa-bars {
 }
 .chat .chat-window .chat-message .chat-message-img img {
   width: 100%;
+  min-width: 50px;
 }
 .chat .chat-window .chat-message .chat-message-text {
   min-height: 40px;
+  margin-left: 70px;
 }
 .chat .chat-area {
   padding: 0 30px 20px;
@@ -2591,6 +2593,79 @@ nav i.fa-bars {
 .ad-button {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.article_comments {
+  margin-top: 20px;
+}
+.article_comments h1 {
+  padding: 10px 0px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.article_comments h2 {
+  padding: 10px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.article_comments .comments-area {
+  width: 100%;
+}
+.article_comments .comments-area #insertImage-1 {
+  display: none;
+}
+.article_comments .comments-area #insertVideo-1 {
+  display: none;
+}
+.article_comments .comments-area #insertFile-1 {
+  display: none;
+}
+.article_comments .comments-area .fr-hs {
+  display: none;
+}
+.article_comments .comments-message {
+  margin: 20px 0;
+}
+.article_comments .comments-message p.com_user_info {
+  padding: 5px 0px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.article_comments .comments-message p.com_user_info span {
+  font-weight: normal;
+  font-size: 10px;
+  color: #878587;
+}
+.article_comments .comments-message .comments-message-img img {
+  width: 100%;
+  min-width: 50px;
+}
+.article_comments .comments-message .comments-message-text {
+  min-height: 60px;
+  margin-left: 70px;
+}
+
+.comments-access {
+  background-color: rgba(255, 79, 79, 0.81);
+  padding-bottom: 20px;
+}
+.comments-access p {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.comments-access a {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.comments-enter a {
+  display: block;
+  width: 200px;
+  margin: 10px 0;
 }
 
 @media only screen and (max-width: 992px) {

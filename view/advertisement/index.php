@@ -12,11 +12,11 @@
             <span class="card-title grey-text text-darken-4"><i class="fa fa-times-circle right"></i><?=$advertisement['title']?></span>
             <p><?=$advertisement['description']?></p>
             <div class="card-action">
-                <a href="/advertisement/<?=strtolower($advertisement['slug'])?>">Читати далі...</a>
+                <a href="/advertisement/view/<?=strtolower($advertisement['slug'])?>">Читати далі...</a>
             </div>
         </div>
         <div class="card-action">
-            <a href="/advertisement/<?=strtolower($advertisement['slug'])?>">Читати далі...</a>
+            <a href="/advertisement/view/<?=strtolower($advertisement['slug'])?>">Читати далі...</a>
         </div>
     </div>
 </div>

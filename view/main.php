@@ -129,6 +129,7 @@
 <script type="text/javascript" src="<?=HOST?>/template/js/materialize.min.js"></script>
 <script type="text/javascript" src="<?=HOST?>/template/js/main.js"></script>
 <script type="text/javascript" src="<?=HOST?>/template/js/ajax.js"></script>
+<script type="text/javascript" src="<?=HOST?>/template/js/translit.js"></script>
 <!-- Include Editor JS files. -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
 </body>

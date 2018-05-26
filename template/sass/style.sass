@@ -195,8 +195,10 @@ nav
       .chat-message-img
         img
           width: 100%
+          min-width: 50px
       .chat-message-text
         min-height: 40px
+        margin-left: 70px
   .chat-area
     padding: 0 30px 20px
   #insertImage-1
@@ -229,5 +231,68 @@ nav
 .ad-button
   width: 100%
   margin-bottom: 10px
+
+.article_comments
+  margin-top: 20px
+
+  h1
+    padding: 10px 0px
+    font-size: 25px
+    font-weight: bold
+
+  h2
+    padding: 10px 0px
+    font-size: 20px
+    font-weight: bold
+
+  .comments-area
+    width: 100%
+    #insertImage-1
+      display: none
+    #insertVideo-1
+      display: none
+    #insertFile-1
+      display: none
+    .fr-hs
+      display: none
+
+  .comments-message
+    margin: 20px 0
+    p.com_user_info
+      padding: 5px 0px
+      font-size: 15px
+      font-weight: bold
+      span
+        font-weight: normal
+        font-size: 10px
+        color: #878587
+
+    .comments-message-img
+      img
+        width: 100%
+        min-width: 50px
+
+    .comments-message-text
+      min-height: 60px
+      margin-left: 70px
+
+.comments-access
+  background-color: rgba(255, 79, 79, 0.81)
+  padding-bottom: 20px
+  p
+    padding: 20px
+    font-size: 20px
+    text-align: center
+    font-weight: bold
+    color: #fff
+  a
+    display: block
+    width: 200px
+    margin: 0 auto
+
+.comments-enter a
+  display: block
+  width: 200px
+  margin: 10px 0
 
 @import "_mobile.sass"

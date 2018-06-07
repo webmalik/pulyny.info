@@ -52,4 +52,9 @@ return array(
     'admin/users'=>'admin/users',
     'admin/users/block/([a-z,A-Z,1-9,-]+)'=>'admin/users_block/$1',
     'admin/users/unblock/([a-z,A-Z,1-9,-]+)'=>'admin/users_unblock/$1',
+
+    'admin/pages' => 'admin/pages',
+    'admin/pages/add'=>'admin/addpages/',
+    'admin/pages/edit/([a-z,A-Z,1-9,-]+)'=>'admin/editpages/$1',
+    'admin/pages/delete/([a-z,A-Z,1-9,-]+)'=>'admin/deletepages/$1',
 );

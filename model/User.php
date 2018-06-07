@@ -1,6 +1,7 @@
 <?php
 
-class User extends FrontModel {
+class User extends FrontModel
+{
 
     public static function checkText($text) {
         if(strlen($text) > 2) {

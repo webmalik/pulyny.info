@@ -3,14 +3,21 @@
 class AdvertisementController //extends FrontController
 {
     public function actionIndex() {
+        $pages = new Pages();
+        $getpage = $pages->getPage('oholoshenya');
+        $page = $getpage[0];
         $advertisement = new Advertisement();
         $advertisements = $advertisement->getAllDescAdvertisement();
+        $data = array("advertisements" => $advertisements, "page"=>$page);
         $template = new Template();
-        $template->render('advertisement/index', array("advertisements" => $advertisements));
+        $template->render('advertisement/index', array("data" => $data));
         return true;
     }
 
     public function actionAdd() {
+        $pages = new Pages();
+        $getpage = $pages->getPage('dodaty-oholoshennya');
+        $page = $getpage[0];
         $advertisement = new Advertisement();
         $add_advertisement = "";
         $title = "";
@@ -44,17 +51,21 @@ class AdvertisementController //extends FrontController
                 $add_advertisement = $advertisement->addAdvertisement(array("title"=>$title, "slug"=>$slug, "description"=>$description, "text"=>$text, "image"=>$image));
             }
         }
-        $data = array("result"=>$add_advertisement);
+        $data = array("result"=>$add_advertisement, "page"=>$page);
         $template = new Template();
-        $template->render('advertisement/add', $data);
+        $template->render('advertisement/add', array("data"=>$data));
         return true;
     }
 
     public function actionView($slug) {
+        $pages = new Pages();
+        $getpage = $pages->getPage('perehlyad-oholoshennya');
+        $page = $getpage[0];
         $advertisement = new Advertisement();
         $advertisements = $advertisement->getAdvertisement($slug);
+        $data = array("advertisements" => $advertisements, "page"=>$page);
         $template = new Template();
-        $template->render('advertisement/view', array("advertisements" => $advertisements));
+        $template->render('advertisement/view', array("data" => $data));
         return true;
     }
 }

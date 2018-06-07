@@ -1,13 +1,16 @@
 <?php
 
-class ChatController //extends FrontController
+class ChatController
 {
     public function actionIndex() {
+        $pages = new Pages();
+        $getpage = $pages->getPage('publichnyy-chat');
+        $page = $getpage[0];
         $chat = new Chat();
         $get_message = $chat->getAllMessages();
-        $data = array("messages"=>$get_message);
+        $data = array("messages"=>$get_message, "page"=>$page);
         $template = new Template();
-        $template->render('chat/index', $data);
+        $template->render('chat/index', array("data"=>$data));
         return true;
     }
 

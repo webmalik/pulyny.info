@@ -3,7 +3,7 @@
         Публічний чат
     </div>
     <div class="main-panel-content chat-window">
-        <?php foreach ($messages as $message) {?>
+        <?php foreach ($data['messages'] as $message) {?>
         <?php $user = User::getUsersByChat($message['user_id'])?>
             <div class="chat-message">
                 <div class="chat-message-img col s1">

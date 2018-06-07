@@ -63,13 +63,6 @@ class Router {
         } else {
             header("Location: /404");
         }
-        /*$controllerObject = new $controllerName;
-        $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
-        if($result != null) {
-            exit();
-        }else {
-            header("Location: /404");
-        }*/
     }
 
 

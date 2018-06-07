@@ -1,5 +1,5 @@
 <a class="btn waves-effect waves-light ad-button" href="/advertisement/add">Додати оголошення</a>
-<?php foreach ($advertisements as $advertisement) {?>
+<?php foreach ($data['advertisements'] as $advertisement) {?>
 <div class="col s12 m6">
     <div class="card">
         <div class="card-image waves-effect waves-block waves-light img_core">

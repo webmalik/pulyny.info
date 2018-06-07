@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Title -->
-    <title>Пулини.info</title>
+    <title><?=$data['page']['title']?> - Пулини.info</title>
+    <meta name="description" content="<?=$data['page']['meta_description']?>"/>
+    <meta name="keywords" content="<?=$data['page']['meta_keywordsф']?>"/>
     <!-- Styles -->
     <link href="<?=HOST?>/template/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?=HOST?>/template/css/materialize.min.css" rel="stylesheet">

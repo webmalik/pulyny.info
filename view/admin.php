@@ -56,7 +56,7 @@
                 <li><a href="/admin/news">Новини</a></li>
                 <li><a href="/admin/users">Користувачі</a></li>
                 <li><a href="/admin/advertisement">Оголошення</a></li>
-                <li><a href="#">Про пулини</a></li>
+                <li><a href="/admin/pages">Сторінки сайту</a></li>
             </ul>
         </div>
         <div class="col s12 m10 admin-container">

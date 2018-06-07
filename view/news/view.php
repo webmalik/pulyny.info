@@ -1,4 +1,4 @@
-<? foreach ($article as $item) {?>
+<? foreach ($data['article'] as $item) {?>
 <div class="col s12 article_view">
     <h1><?=$item['title']?></h1>
     <img class="activator" src="<?=HOST.$item['image']?>">
@@ -24,8 +24,8 @@
     </div>
     <div class="comments-block">
         <?php
-        if (isset($comments) && $comments != NULL) {
-            foreach ($comments as $comment) {
+        if (isset($data['comments']) && $data['comments'] != NULL) {
+            foreach ($data['comments'] as $comment) {
                 $user = User::getUserById($comment['user']);
                 $time = strtotime($comment['date']);
                 $date = date("H:i d.m.Y", $time);
